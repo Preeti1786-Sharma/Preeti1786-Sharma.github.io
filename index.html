@@ -4,28 +4,62 @@
   <title>Preeti Sharma | Lifecycle Manager</title>
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, sans-serif;
-      max-width: 1000px;
-      margin: 70px auto;
+      margin: 0;
       color: #1f1f1f;
-      line-height: 1.7;
+    }
+
+    /* NAVBAR */
+    .nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: white;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
+      border-bottom: 1px solid #eee;
+      z-index: 1000;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #111;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .nav a:hover {
+      color: #555;
+    }
+
+    /* SECTIONS */
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 90px 20px;
     }
 
     h1 {
-      font-size: 44px;
-      margin-bottom: 5px;
+      font-size: 46px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      border-bottom: 1px solid #eee;
+      padding-bottom: 6px;
+      margin-bottom: 20px;
     }
 
     .subtitle {
       color: #555;
       font-size: 16px;
-    }
-
-    h2 {
-      border-bottom: 1px solid #e6e6e6;
-      padding-bottom: 6px;
-      margin-top: 40px;
     }
 
     .btn {
@@ -43,6 +77,7 @@
       opacity: 0.85;
     }
 
+    /* CAPABILITIES */
     .tags span {
       display: inline-block;
       background: #f4f4f4;
@@ -52,18 +87,70 @@
       font-size: 13px;
     }
 
-    img {
-      width: 280px;
-      margin: 10px 10px 20px 0;
-      border-radius: 8px;
-      border: 1px solid #eee;
+    /* CERT GRID */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
     }
+
+    .cert-card {
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .cert-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .cert-card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    /* DASHBOARD */
+    .dash {
+      width: 100%;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .dash:hover {
+      transform: scale(1.02);
+    }
+
+    /* FADE IN */
+    .fade {
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
   </style>
 </head>
 
 <body>
 
-  <!-- HERO -->
+<!-- NAV -->
+<div class="nav">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#cert">Certifications</a>
+  <a href="#dash">Dashboard</a>
+  <a href="projects.html">Projects</a>
+  <a href="resume.html">Resume</a>
+</div>
+
+<!-- HOME -->
+<section id="home" class="fade">
+
   <h1>Preeti Sharma</h1>
   <div class="subtitle">
     Lifecycle Manager | Philips Medical Systems Nederland B.V.
@@ -74,52 +161,66 @@
     inventory optimisation, and financial risk management in MedTech environments.
   </p>
 
-  <!-- BUTTONS -->
   <a class="btn" href="resume.html">View Resume</a>
   <a class="btn" href="resume.pdf" target="_blank" download>Download Resume</a>
   <a class="btn" href="projects.html">Case Studies</a>
-  <a class="btn" href="https://www.linkedin.com/in/preeti-s-78b724152/" target="_blank">LinkedIn</a>
 
-  <!-- EXECUTIVE SUMMARY -->
-  <h2>Executive Summary</h2>
-  <p>
-    I work across supply chain, finance, and operations to enable lifecycle governance,
-    improve forecasting accuracy, and optimize working capital in global MedTech systems.
-  </p>
+</section>
 
-  <!-- CAPABILITY SNAPSHOT -->
+<!-- ABOUT -->
+<section id="about" class="fade">
+
   <h2>Capability Snapshot</h2>
 
-  <p><strong>Supply Chain Leadership:</strong> EOL Strategy · Inventory Governance · MedTech Lifecycle Management</p>
+  <p><strong>Supply Chain Leadership:</strong> EOL Strategy · Inventory Governance · Lifecycle Management</p>
   <p><strong>Analytics & Tools:</strong> SAP · Power BI · Advanced Excel · Forecast Modelling</p>
   <p><strong>Operational Excellence:</strong> S&OP · Working Capital · CAPA · Process Optimization</p>
-  <p><strong>Stakeholder Leadership:</strong> Cross-functional Governance · Vendor Management · Executive Reporting</p>
 
-  <!-- CORE SKILLS -->
-  <h2>Core Expertise</h2>
-  <div class="tags">
-    <span>EOL Strategy</span>
-    <span>Inventory Optimisation</span>
-    <span>S&OP Planning</span>
-    <span>Working Capital</span>
-    <span>SAP</span>
-    <span>Power BI</span>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="cert" class="fade">
+
+  <h2>Certifications</h2>
+
+  <div class="cert-grid">
+
+    <div class="cert-card">
+      <img src="scm.jpg">
+      <p>Supply Chain Management</p>
+    </div>
+
+    <div class="cert-card">
+      <img src="scrum.jpg">
+      <p>Scrum Master</p>
+    </div>
+
+    <div class="cert-card">
+      <img src="powerbi.jpg">
+      <p>Power BI</p>
+    </div>
+
+    <div class="cert-card">
+      <img src="lssgb.jpg">
+      <p>Lean Six Sigma Green Belt</p>
+    </div>
+
   </div>
 
-  <!-- CERTIFICATIONS -->
-<h2>Certifications</h2>
+</section>
 
-<p><strong>Supply Chain Management</strong></p>
-<img src="SupplyChainManagement.jpg">
+<!-- DASHBOARD -->
+<section id="dash" class="fade">
 
-<p><strong>Scrum Master</strong></p>
-<img src="ScrumMaster.jpg">
+  <h2>Power BI Dashboard</h2>
 
-<p><strong>Power BI</strong></p>
-<img src="PowerBI.jpg">
+  <p>
+    Interactive analytics dashboard for supply chain visibility and lifecycle decision-making.
+  </p>
 
-<p><strong>Lean Six Sigma Green Belt Certification</strong></p>
-<img src="Lean Six Sigma Green Belt Certification.jpg">
+  <img src="powerbi_dashboard.jpg" class="dash">
+
+</section>
 
 </body>
 </html>

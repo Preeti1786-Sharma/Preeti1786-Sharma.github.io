@@ -3,16 +3,22 @@
 <head>
   <title>About | Preeti Sharma</title>
 
+  <!-- TYPOGRAPHY (CONSISTENT SYSTEM) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
       background: #0b0d10;
       color: #e6e6e6;
       -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      letter-spacing: 0.2px;
+      line-height: 1.65;
     }
 
-    /* NAV */
+    /* NAV (UNCHANGED STYLE, JUST POLISHED) */
     .nav {
       position: fixed;
       top: 0;
@@ -21,7 +27,7 @@
       backdrop-filter: blur(10px);
       display: flex;
       justify-content: center;
-      gap: 26px;
+      gap: 22px;
       padding: 14px;
       border-bottom: 1px solid #1c1f26;
       z-index: 1000;
@@ -31,7 +37,7 @@
       color: #9aa4b2;
       text-decoration: none;
       font-size: 13px;
-      letter-spacing: 0.3px;
+      font-weight: 500;
       transition: 0.2s;
     }
 
@@ -45,49 +51,47 @@
       padding: 110px 20px 60px;
     }
 
-    /* HERO */
     h1 {
+      text-align: center;
       font-size: 34px;
       font-weight: 600;
-      text-align: center;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
+      letter-spacing: -0.4px;
     }
 
     .subtitle {
       text-align: center;
-      color: #7d8590;
+      color: #8b949e;
       font-size: 14px;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
 
-    .profile {
-      text-align: center;
-    }
-
-    .profile img {
-      width: 130px;
-      height: 130px;
+    .profile-pic {
+      width: 135px;
+      height: 135px;
       border-radius: 50%;
       object-fit: cover;
+      display: block;
+      margin: 20px auto;
       border: 1px solid #2a2f3a;
-      margin-bottom: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     }
 
     .intro {
       background: #11151c;
       border: 1px solid #1f2633;
       border-radius: 12px;
-      padding: 18px;
+      padding: 16px;
       font-size: 14px;
-      line-height: 1.7;
       color: #cbd5e1;
-      margin-bottom: 50px;
+      line-height: 1.7;
+      margin-bottom: 40px;
     }
 
-    /* TIMELINE */
+    /* TIMELINE (PRESERVED LAYOUT) */
     .timeline {
       position: relative;
-      margin-top: 40px;
+      margin-top: 30px;
     }
 
     .timeline::before {
@@ -100,17 +104,17 @@
       background: #232836;
     }
 
-    .item {
+    .event {
       position: relative;
       padding-left: 55px;
       margin-bottom: 28px;
 
       opacity: 0;
-      transform: translateY(16px);
+      transform: translateY(14px);
       transition: all 0.5s ease;
     }
 
-    .item.show {
+    .event.show {
       opacity: 1;
       transform: translateY(0);
     }
@@ -119,37 +123,25 @@
       position: absolute;
       left: 11px;
       top: 6px;
-      width: 14px;
-      height: 14px;
+      width: 12px;
+      height: 12px;
       background: #4f7cff;
       border-radius: 50%;
-      box-shadow: 0 0 12px rgba(79,124,255,0.4);
-    }
-
-    .card {
-      background: linear-gradient(180deg, #121722, #0f131b);
-      border: 1px solid #1f2633;
-      border-radius: 12px;
-      padding: 14px 16px;
-      transition: 0.25s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-2px);
-      border-color: #2a3550;
+      box-shadow: 0 0 10px rgba(79,124,255,0.35);
     }
 
     .year {
       font-size: 12px;
       color: #7d8590;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
+      letter-spacing: 0.3px;
     }
 
     .title {
       font-size: 14px;
       font-weight: 600;
       color: #e6e6e6;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .desc {
@@ -173,118 +165,94 @@
 
 <section>
 
-<h1>Professional Journey</h1>
-<div class="subtitle">Supply Chain · Lifecycle Strategy · Global MedTech Transformation</div>
+<h1>My Journey</h1>
+<div class="subtitle">Leadership • Supply Chain • Global Transformation</div>
 
-<div class="profile">
-  <img src="pic.jpg" alt="Preeti Sharma">
-</div>
+<img src="pic.jpg" class="profile-pic" alt="Preeti Sharma">
 
 <div class="intro">
-A structured career spanning automotive, social governance, and global MedTech lifecycle leadership — evolving from operational execution roles in India to strategic supply chain transformation at Philips Healthcare in the Netherlands.
+A structured career evolving from sports leadership and customer operations in India to global MedTech lifecycle strategy at Philips Healthcare in the Netherlands.
 </div>
 
 <!-- TIMELINE -->
 
 <div class="timeline">
 
-  <div class="item">
+  <div class="event">
     <div class="dot"></div>
-    <div class="card">
-      <div class="year">1986</div>
-      <div class="title">Early Foundations</div>
-      <div class="desc">Born on 1st July 1986. Built early discipline, resilience, and leadership mindset.</div>
-    </div>
+    <div class="year">1986</div>
+    <div class="title">Early Foundations</div>
+    <div class="desc">Born on 1st July 1986 — building discipline and resilience.</div>
   </div>
 
-  <div class="item">
+  <div class="event">
     <div class="dot"></div>
-    <div class="card">
-      <div class="year">2005</div>
-      <div class="title">National Sports Representation</div>
-      <div class="desc">Represented India in National Basketball Championship, developing competitive leadership and teamwork mindset.</div>
-    </div>
+    <div class="year">2005</div>
+    <div class="title">National Basketball Representation</div>
+    <div class="desc">Represented India in national championship, developing leadership and competitive mindset.</div>
   </div>
 
-  <div class="item">
+  <div class="event">
     <div class="dot"></div>
-    <div class="card">
-      <div class="year">2008–2014</div>
-      <div class="title">Hyundai Motor India</div>
-      <div class="desc">Customer Relations Manager managing service operations and customer lifecycle experience.</div>
-    </div>
+    <div class="year">2008–2014</div>
+    <div class="title">Hyundai Motor India</div>
+    <div class="desc">Customer Relations Manager handling service operations and customer lifecycle experience.</div>
   </div>
 
-  <div class="item">
+  <div class="event">
     <div class="dot"></div>
-    <div class="card">
-      <div class="year">2014–2018</div>
-      <div class="title">Angel Quality Solutions (US Org)</div>
-      <div class="desc">Managed administration and operations across business workflows and client coordination.</div>
-    </div>
+    <div class="year">2014–2018</div>
+    <div class="title">Angel Quality Solutions</div>
+    <div class="desc">Managed administration and operations in US-based organization.</div>
   </div>
 
-  <div class="item">
+  <div class="event">
     <div class="dot"></div>
-    <div class="card">
-      <div class="year">2018–2021</div>
-      <div class="title">Navjyoti India Foundation</div>
-      <div class="desc">Deputy Manager under Hon’ble Dr. Kiran Bedi leading governance and operational excellence initiatives.</div>
-    </div>
+    <div class="year">2018–2021</div>
+    <div class="title">Navjyoti India Foundation</div>
+    <div class="desc">Deputy Manager under Hon’ble Dr. Kiran Bedi leading governance and operations.</div>
   </div>
 
-  <div class="item">
+  <div class="event">
     <div class="dot"></div>
-    <div class="card">
-      <div class="year">2022–2023</div>
-      <div class="title">Corporate Gurukul</div>
-      <div class="desc">Strategic Projects Lead driving procurement analytics and cost optimization across APAC & MEA.</div>
-    </div>
+    <div class="year">2022–2023</div>
+    <div class="title">Corporate Gurukul</div>
+    <div class="desc">Strategic Projects Lead driving procurement optimization and analytics.</div>
   </div>
 
-  <div class="item">
+  <div class="event">
     <div class="dot"></div>
-    <div class="card">
-      <div class="year">2023</div>
-      <div class="title">Netherlands – MBA Journey</div>
-      <div class="desc">Moved to pursue MBA in Supply Chain Management to gain global exposure and cross-cultural business experience.</div>
-    </div>
+    <div class="year">2023</div>
+    <div class="title">Netherlands – MBA</div>
+    <div class="desc">Moved for MBA in Supply Chain Management to gain global exposure.</div>
   </div>
 
-  <div class="item">
+  <div class="event">
     <div class="dot"></div>
-    <div class="card">
-      <div class="year">Feb 2024</div>
-      <div class="title">Philips Internship</div>
-      <div class="desc">Supply Chain Intern at Philips Healthcare, Eindhoven contributing to lifecycle initiatives.</div>
-    </div>
+    <div class="year">Feb 2024</div>
+    <div class="title">Philips Internship</div>
+    <div class="desc">Supply Chain Intern contributing to lifecycle transformation initiatives.</div>
   </div>
 
-  <div class="item">
+  <div class="event">
     <div class="dot"></div>
-    <div class="card">
-      <div class="year">Sep 2024</div>
-      <div class="title">MBA Completion</div>
-      <div class="desc">Completed MBA in Supply Chain Management from Maastricht University.</div>
-    </div>
+    <div class="year">Sep 2024</div>
+    <div class="title">MBA Completion</div>
+    <div class="desc">Completed MBA in Supply Chain Management at Maastricht University.</div>
   </div>
 
-  <div class="item">
+  <div class="event">
     <div class="dot"></div>
-    <div class="card">
-      <div class="year">Feb 2025</div>
-      <div class="title">NOK Process Implementation</div>
-      <div class="desc">Philips adopted NOK handling process designed during internship — now part of operational workflow.</div>
-    </div>
+    <div class="year">Feb 2025</div>
+    <div class="title">NOK Process Implementation</div>
+    <div class="desc">Philips adopted NOK handling process designed during internship.</div>
   </div>
 
-  <div class="item">
+  <div class="event">
     <div class="dot"></div>
-    <div class="card">
-      <div class="year">Oct 2024 – Present</div>
-      <div class="title">Lifecycle Manager – Philips</div>
-      <div class="desc">Leading global EOL strategy, inventory optimization, and lifecycle governance for MedTech portfolio.</div>
-    </div>
+    <div class="year">Present</div>
+    <div class="title">Lifecycle Manager – Philips</div>
+    <div class="desc">Leading global EOL strategy and lifecycle governance for MedTech portfolio.</div>
   </div>
 
 </div>
@@ -292,7 +260,7 @@ A structured career spanning automotive, social governance, and global MedTech l
 </section>
 
 <script>
-const items = document.querySelectorAll('.item');
+const items = document.querySelectorAll('.event');
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -302,7 +270,7 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.15 });
 
-items.forEach(i => observer.observe(i));
+items.forEach(item => observer.observe(item));
 </script>
 
 </body>

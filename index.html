@@ -4,13 +4,17 @@
   <title>Preeti Sharma | Lifecycle Manager</title>
 
   <style>
+    /* =========================
+       DARK EXECUTIVE THEME
+    ========================== */
+
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      color: #1f1f1f;
-      background: #fff;
+      font-family: Arial, sans-serif;
+      background: #0f1115;
+      color: #e6e6e6;
       line-height: 1.5;
     }
 
@@ -19,83 +23,149 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background: #fff;
+      background: rgba(15,17,21,0.95);
       display: flex;
       justify-content: center;
       gap: 25px;
       padding: 12px;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid #222;
       z-index: 1000;
+      backdrop-filter: blur(10px);
     }
 
     .nav a {
+      color: #ddd;
       text-decoration: none;
-      color: #111;
-      font-weight: bold;
       font-size: 13px;
+      font-weight: bold;
     }
+
+    .nav a:hover { color: #fff; }
 
     section {
       max-width: 950px;
       margin: auto;
-      padding: 40px 20px;   /* 🔥 reduced spacing = NO GAPS */
+      padding: 45px 20px;
     }
 
-    h1 { font-size: 44px; margin: 0; }
+    h1 {
+      font-size: 46px;
+      margin: 0;
+    }
 
     h2 {
-      font-size: 20px;
-      margin-bottom: 10px;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 5px;
+      font-size: 18px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 6px;
     }
 
-    .subtitle { color: #555; margin-top: 5px; }
+    .subtitle { color: #aaa; margin-top: 6px; }
 
+    p { color: #d0d0d0; }
+
+    /* BUTTONS */
     .btn {
       display: inline-block;
       padding: 9px 14px;
       margin: 10px 8px 0 0;
-      background: #111;
-      color: #fff;
+      background: #1f2937;
+      color: white;
       text-decoration: none;
       border-radius: 6px;
       font-size: 13px;
+      transition: 0.3s;
     }
 
-    .box {
-      background: #f7f7f7;
-      padding: 12px;
-      border-radius: 8px;
-      margin-top: 10px;
-      font-size: 14px;
+    .btn:hover {
+      background: #374151;
     }
 
+    /* GRID */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 10px;
+      gap: 12px;
     }
 
+    /* CARD */
     .card {
-      border: 1px solid #eee;
+      background: #151922;
+      border: 1px solid #222;
       padding: 12px;
-      border-radius: 10px;
+      border-radius: 12px;
+      transition: 0.4s;
+      min-height: 210px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #333;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
     }
 
     .role-title {
       font-weight: bold;
-      margin-bottom: 3px;
+      color: #fff;
     }
 
-    .company {
-      font-size: 13px;
-      color: #444;
-    }
+    .company { color: #aaa; font-size: 13px; }
 
-    .period {
+    .period { color: #777; font-size: 12px; }
+
+    /* KPI */
+    .kpi {
+      background: #111827;
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 8px;
       font-size: 12px;
-      color: #777;
+      color: #cbd5e1;
+    }
+
+    /* BOX */
+    .box {
+      background: #151922;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #222;
+      font-size: 13px;
+      color: #d1d5db;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 8px;
+    }
+
+    /* MODAL */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+    }
+
+    .modal img {
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 10px;
     }
 
   </style>
@@ -108,7 +178,6 @@
   <a href="#home">Home</a>
   <a href="#skills">Skills</a>
   <a href="#exp">Experience</a>
-  <a href="#edu">Education</a>
   <a href="#cert">Certifications</a>
 </div>
 
@@ -121,29 +190,29 @@
   </div>
 
   <p>
-    Supply Chain & Lifecycle professional specializing in EOL strategy,
-    inventory optimisation, and working capital management in regulated MedTech environments.
+    Supply Chain & Lifecycle Management professional with 6+ years of international experience across MedTech and high-tech environments, currently driving end-of-life (EOL) and obsolescence strategy at Philips. Experienced in managing global hardware portfolios, improving forecast accuracy, and optimizing working capital in regulated environments (GMP/GDP/QMS). Proven track record in cross-functional decision-making, supplier coordination, and process standardization. MBA in Supply Chain Management from Maastricht University, Lean Six Sigma Green Belt, and Certified ScrumMaster.
   </p>
+
+  <div class="box">
+    <strong>ERP/Systems:</strong> SAP (MM, WM), Tableau, Advanced Excel<br>
+    <strong>Methodologies:</strong> Lean Six Sigma, Scrum/Agile, CAPA, GMP/GDP, ISO, QMS
+  </div>
 
   <a class="btn" href="resume.html">View Resume</a>
   <a class="btn" href="projects.html">Case Studies</a>
 
 </section>
 
-<!-- CORE COMPETENCIES -->
+<!-- SKILLS -->
 <section id="skills">
-
   <h2>Core Competencies</h2>
-
   <div class="box">
     EOL & Obsolescence Strategy · S&OP & Demand Planning · SAP (MM/WM) & Power BI · Inventory & Working Capital Optimisation · Regulatory Compliance (GMP/GDP/QMS) · Vendor Negotiation & Procurement · Cross-functional Stakeholder Management · Process Improvement (Lean / CAPA) · Advanced Excel & Scenario Modelling
   </div>
-
 </section>
 
 <!-- EXPERIENCE -->
 <section id="exp">
-
   <h2>Professional Experience</h2>
 
   <div class="grid">
@@ -152,93 +221,103 @@
       <div class="role-title">Lifecycle Manager</div>
       <div class="company">Philips Medical Systems Nederland B.V.</div>
       <div class="period">Oct 2024 – Present</div>
-      <p>Own EOL strategy, improved forecast accuracy (62% → 78%), reduced inventory by 20%, cut decision cycle time by 2 months → 20 days.</p>
+      <div class="kpi">
+        Forecast accuracy: 62% → 78%<br>
+        Inventory reduction: 20%<br>
+        Decision cycle: 2 months → 20 days
+      </div>
     </div>
 
     <div class="card">
       <div class="role-title">Supply Chain Intern</div>
       <div class="company">Philips</div>
       <div class="period">Feb 2024 – Sep 2024</div>
-      <p>Designed NOK process reducing disruptions by 96%. Selected for full-time role.</p>
+      <div class="kpi">
+        96% reduction in disruptions<br>
+        NOK process implemented
+      </div>
     </div>
 
     <div class="card">
       <div class="role-title">Executive Associate</div>
       <div class="company">Corporate Gurukul</div>
       <div class="period">2022 – 2023</div>
-      <p>Managed APAC & MEA procurement. Delivered 10–15% cost savings on €2M spend.</p>
+      <div class="kpi">
+        10–15% cost savings<br>
+        €2M spend optimization
+      </div>
     </div>
 
     <div class="card">
       <div class="role-title">Deputy Manager</div>
       <div class="company">Navjyoti India Foundation</div>
       <div class="period">2019 – 2021</div>
-      <p>Managed logistics operations, improved efficiency, ensured zero audit non-conformances.</p>
+      <div class="kpi">
+        Zero audit issues<br>
+        Improved logistics efficiency
+      </div>
     </div>
 
   </div>
-
-</section>
-
-<!-- EDUCATION -->
-<section id="edu">
-
-  <h2>Education</h2>
-
-  <div class="box">
-    MBA – Supply Chain Management | Maastricht University<br>
-    Thesis: Design of the NOK Handling Processes at Philips IGT
-  </div>
-
 </section>
 
 <!-- CERTIFICATIONS -->
 <section id="cert">
-
   <h2>Certifications</h2>
 
   <div class="grid">
 
-    <div class="card">
-      <div class="role-title">Supply Chain Management</div>
-      <div class="company">Certification</div>
-      <img src="scm.jpg" style="width:100%; border-radius:8px; margin-top:8px;">
+    <div class="card" onclick="openModal('scm.jpg')">
+      Supply Chain Management
+      <img src="scm.jpg">
     </div>
 
-    <div class="card">
-      <div class="role-title">Scrum Master</div>
-      <div class="company">Scrum Alliance</div>
-      <img src="scrum.jpg" style="width:100%; border-radius:8px; margin-top:8px;">
+    <div class="card" onclick="openModal('scrum.jpg')">
+      Scrum Master
+      <img src="scrum.jpg">
     </div>
 
-    <div class="card">
-      <div class="role-title">Power BI</div>
-      <div class="company">Analytics Certification</div>
-      <img src="powerbi.jpg" style="width:100%; border-radius:8px; margin-top:8px;">
+    <div class="card" onclick="openModal('powerbi.jpg')">
+      Power BI
+      <img src="powerbi.jpg">
     </div>
 
-    <div class="card">
-      <div class="role-title">Lean Six Sigma Green Belt</div>
-      <div class="company">Process Excellence</div>
-      <img src="lssgb.jpg" style="width:100%; border-radius:8px; margin-top:8px;">
+    <div class="card" onclick="openModal('lssgb.jpg')">
+      Lean Six Sigma
+      <img src="lssgb.jpg">
     </div>
 
   </div>
-
 </section>
 
-<!-- LANGUAGES -->
-<section>
+<!-- MODAL -->
+<div class="modal" id="modal" onclick="closeModal()">
+  <img id="modalImg">
+</div>
 
-  <h2>Languages & Interests</h2>
+<script>
+function openModal(src) {
+  document.getElementById('modal').style.display = 'flex';
+  document.getElementById('modalImg').src = src;
+}
 
-  <div class="box">
-    English · Dutch · Hindi <br><br>
-    Former Indian National Basketball Player
-    
-  </div>
+function closeModal() {
+  document.getElementById('modal').style.display = 'none';
+}
 
-</section>
+/* SCROLL REVEAL */
+const cards = document.querySelectorAll('.card');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+cards.forEach(card => observer.observe(card));
+</script>
 
 </body>
 </html>

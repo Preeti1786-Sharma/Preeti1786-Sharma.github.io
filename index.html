@@ -11,7 +11,6 @@
       font-family: Arial, sans-serif;
       background: #0f1115;
       color: #e6e6e6;
-      line-height: 1.5;
     }
 
     /* NAV */
@@ -40,78 +39,135 @@
     section {
       max-width: 1100px;
       margin: auto;
-      padding: 70px 20px;
+      padding: 25px 20px;
     }
 
     h1 { font-size: 38px; margin-bottom: 5px; }
 
     h2 {
-      font-size: 17px;
+      font-size: 16px;
       border-bottom: 1px solid #333;
-      padding-bottom: 5px;
-      margin-top: 30px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      padding-bottom: 4px;
     }
 
     .subtitle { color: #aaa; }
 
     .box {
       background: #151922;
-      padding: 14px;
+      padding: 12px;
       border-radius: 10px;
       border: 1px solid #222;
-      font-size: 14px;
-      color: #d1d5db;
+      margin-bottom: 10px;
     }
 
-    /* GRID FIXED */
+    /* GRID */
     .grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 12px;
     }
 
-    /* RESPONSIVE */
     @media (max-width: 1000px) {
-      .grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      .grid { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 600px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
+      .grid { grid-template-columns: 1fr; }
     }
 
+    /* CARDS */
     .card {
       background: #151922;
       border: 1px solid #222;
       padding: 14px;
       border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       transition: 0.3s;
+      cursor: pointer;
     }
 
     .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.5);
     }
 
-    .role { font-weight: bold; color: #fff; }
+    .role { font-weight: bold; }
     .company { color: #aaa; font-size: 13px; }
 
     ul {
       padding-left: 18px;
       margin-top: 8px;
+      flex-grow: 1;
     }
 
     li { margin-bottom: 5px; }
 
+    /* KPI STRIP */
+    .kpi {
+      background: #1f2937;
+      padding: 8px;
+      border-radius: 8px;
+      font-size: 12px;
+      margin-top: 8px;
+      color: #cbd5e1;
+    }
+
+    /* CERT IMAGES */
     img {
       width: 100%;
       border-radius: 10px;
-      margin-top: 8px;
+      margin-bottom: 8px;
     }
 
+    /* MODAL */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+    }
+
+    .modal-content {
+      display: block;
+      margin: auto;
+      max-width: 80%;
+      border-radius: 10px;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    /* TIMELINE */
+    .timeline {
+      border-left: 2px solid #333;
+      padding-left: 15px;
+    }
+
+    .event {
+      margin-bottom: 12px;
+    }
+
+    .year {
+      color: #7aa2ff;
+      font-size: 13px;
+    }
+
+    /* BUTTONS */
     .cta {
       text-align: center;
       margin-top: 20px;
@@ -125,7 +181,6 @@
       color: white;
       text-decoration: none;
       border-radius: 6px;
-      font-size: 14px;
     }
 
     .btn:hover { background: #374151; }
@@ -135,134 +190,141 @@
 
 <body>
 
-<!-- NAV -->
 <div class="nav">
   <a href="#home">Home</a>
   <a href="#skills">Skills</a>
   <a href="#exp">Experience</a>
   <a href="#cert">Certifications</a>
   <a href="projects.html">Case Studies</a>
-  <a href="resume.html">View Resume</a>
+  <a href="resume.html">Resume</a>
 </div>
 
-<!-- HOME -->
 <section id="home">
 
-  <h1>Preeti Sharma</h1>
-  <div class="subtitle">Lifecycle Manager | Philips Medical Systems Nederland B.V.</div>
+<h1>Preeti Sharma</h1>
+<div class="subtitle">Lifecycle Manager | Philips Medical Systems Nederland B.V.</div>
 
-  <h2>Professional Summary</h2>
+<h2>Professional Summary</h2>
+<div class="box">
+Supply Chain & Lifecycle Management professional with 6+ years of international experience across MedTech and high-tech environments, currently driving end-of-life (EOL) and obsolescence strategy at Philips. Experienced in managing global hardware portfolios, improving forecast accuracy, and optimizing working capital in regulated environments (GMP/GDP/QMS). Proven track record in cross-functional decision-making, supplier coordination, and process standardization. MBA in Supply Chain Management from Maastricht University, Lean Six Sigma Green Belt, and Certified ScrumMaster.
+</div>
 
-  <div class="box">
-    Supply Chain & Lifecycle Management professional with 6+ years of international experience across MedTech and high-tech environments, currently driving end-of-life (EOL) and obsolescence strategy at Philips. Experienced in managing global hardware portfolios, improving forecast accuracy, and optimizing working capital in regulated environments (GMP/GDP/QMS). Proven track record in cross-functional decision-making, supplier coordination, and process standardization. MBA in Supply Chain Management from Maastricht University, Lean Six Sigma Green Belt, and Certified ScrumMaster.
-  </div>
+<h2>About Me</h2>
+<div class="timeline">
+  <div class="event"><span class="year">2024–Present</span> Lifecycle Manager – Philips</div>
+  <div class="event"><span class="year">2024</span> Supply Chain Intern – Philips</div>
+  <div class="event"><span class="year">2023</span> MBA – Maastricht University</div>
+  <div class="event"><span class="year">2022–2023</span> Corporate Gurukul</div>
+  <div class="event"><span class="year">2019–2021</span> Navjyoti India Foundation</div>
+</div>
 
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
-
-  <h2>Core Competencies</h2>
-
-  <div class="box">
-    EOL & Obsolescence Strategy · S&OP & Demand Planning · SAP (MM/WM) & Power BI · Inventory & Working Capital Optimisation · Regulatory Compliance (GMP/GDP/QMS) · Vendor Negotiation & Procurement · Cross-functional Stakeholder Management · Process Improvement (Lean / CAPA) · Advanced Excel & Scenario Modelling
-  </div>
-
+<h2>Core Competencies</h2>
+<div class="box">
+EOL & Obsolescence Strategy · S&OP · SAP · Power BI · Inventory Optimisation · Procurement · Lean Six Sigma · CAPA · Compliance
+</div>
 </section>
 
-<!-- EXPERIENCE -->
 <section id="exp">
+<h2>Professional Experience</h2>
 
-  <h2>Professional Experience</h2>
+<div class="grid">
 
-  <div class="grid">
+<div class="card">
+<div>
+<div class="role">Lifecycle Manager</div>
+<div class="company">Philips</div>
+<ul>
+<li>Forecast accuracy improved</li>
+<li>Inventory reduced 20%</li>
+</ul>
+</div>
+<div class="kpi">MAPE ↑ | Inventory ↓ | Cycle Time ↓</div>
+</div>
 
-    <div class="card">
-      <div class="role">Lifecycle Manager</div>
-      <div class="company">Philips Medical Systems Nederland B.V.</div>
-      <div>Oct 2024 – Present</div>
-      <ul>
-        <li>Own EOL and obsolescence strategy</li>
-        <li>Improved forecast accuracy (62% → 78%)</li>
-        <li>Reduced excess inventory by 20%</li>
-        <li>Reduced decision cycle time</li>
-      </ul>
-    </div>
+<div class="card">
+<div>
+<div class="role">Supply Chain Intern</div>
+<div class="company">Philips</div>
+<ul>
+<li>NOK process improved 96%</li>
+</ul>
+</div>
+<div class="kpi">Operational Stability ↑</div>
+</div>
 
-    <div class="card">
-      <div class="role">Supply Chain Intern</div>
-      <div class="company">Philips Medical Systems Nederland B.V.</div>
-      <div>Feb 2024 – Sep 2024</div>
-      <ul>
-        <li>Designed NOK process (96% improvement)</li>
-        <li>Converted to full-time role</li>
-      </ul>
-    </div>
+<div class="card">
+<div>
+<div class="role">Strategic Projects Lead</div>
+<div class="company">Corporate Gurukul</div>
+<ul>
+<li>10–15% savings</li>
+</ul>
+</div>
+<div class="kpi">Cost Efficiency ↑</div>
+</div>
 
-    <div class="card">
-      <div class="role">Strategic Projects Lead</div>
-      <div class="company">Corporate Gurukul</div>
-      <div>2022 – 2023</div>
-      <ul>
-        <li>Managed procurement APAC & MEA</li>
-        <li>Delivered 10–15% savings</li>
-        <li>Built Power BI dashboards</li>
-      </ul>
-    </div>
+<div class="card">
+<div>
+<div class="role">Deputy Manager</div>
+<div class="company">Navjyoti India Foundation</div>
+<ul>
+<li>Zero audit issues</li>
+</ul>
+</div>
+<div class="kpi">Compliance 100%</div>
+</div>
 
-    <div class="card">
-      <div class="role">Deputy Manager</div>
-      <div class="company">Navjyoti India Foundation</div>
-      <div>2019 – 2021</div>
-      <ul>
-        <li>Managed supply chain operations</li>
-        <li>Improved service levels</li>
-        <li>Zero audit non-conformances</li>
-      </ul>
-    </div>
-
-  </div>
-
+</div>
 </section>
 
-<!-- CERTIFICATIONS -->
 <section id="cert">
+<h2>Certifications</h2>
 
-  <h2>Certifications</h2>
+<div class="grid">
 
-  <div class="grid">
+<div class="card" onclick="openModal('scm.jpg')">
+<img src="scm.jpg">Supply Chain Management
+</div>
 
-    <div class="card">
-      <img src="scm.jpg">
-      Supply Chain Management
-    </div>
+<div class="card" onclick="openModal('scrum.jpg')">
+<img src="scrum.jpg">ScrumMaster
+</div>
 
-    <div class="card">
-      <img src="scrum.jpg">
-      ScrumMaster
-    </div>
+<div class="card" onclick="openModal('powerbi.jpg')">
+<img src="powerbi.jpg">Power BI
+</div>
 
-    <div class="card">
-      <img src="powerbi.jpg">
-      Power BI
-    </div>
+<div class="card" onclick="openModal('lssgb.jpg')">
+<img src="lssgb.jpg">Lean Six Sigma
+</div>
 
-    <div class="card">
-      <img src="lssgb.jpg">
-      Lean Six Sigma Green Belt
-    </div>
-
-  </div>
-
+</div>
 </section>
 
-<!-- CTA -->
-<section class="cta">
+<div class="cta">
+<a class="btn" href="projects.html">Case Studies</a>
+<a class="btn" href="resume.html">View Resume</a>
+</div>
 
-  <a class="btn" href="projects.html">View Case Studies</a>
-  <a class="btn" href="resume.html">View Resume</a>
+<!-- MODAL -->
+<div id="modal" class="modal" onclick="closeModal()">
+<span class="close">&times;</span>
+<img class="modal-content" id="modal-img">
+</div>
 
-</section>
+<script>
+function openModal(src) {
+  document.getElementById("modal").style.display = "block";
+  document.getElementById("modal-img").src = src;
+}
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+</script>
 
 </body>
 </html>

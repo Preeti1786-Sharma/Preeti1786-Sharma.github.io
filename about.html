@@ -6,9 +6,10 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f1115;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: #0b0d10;
       color: #e6e6e6;
+      -webkit-font-smoothing: antialiased;
     }
 
     /* NAV */
@@ -16,59 +17,71 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background: #0f1115;
+      background: rgba(11, 13, 16, 0.85);
+      backdrop-filter: blur(10px);
       display: flex;
       justify-content: center;
-      gap: 20px;
-      padding: 12px;
-      border-bottom: 1px solid #222;
+      gap: 26px;
+      padding: 14px;
+      border-bottom: 1px solid #1c1f26;
       z-index: 1000;
     }
 
     .nav a {
-      color: #aaa;
+      color: #9aa4b2;
       text-decoration: none;
-      font-size: 14px;
-      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.3px;
+      transition: 0.2s;
     }
 
-    .nav a:hover { color: #fff; }
+    .nav a:hover {
+      color: #ffffff;
+    }
 
     section {
-      max-width: 1000px;
+      max-width: 980px;
       margin: auto;
-      padding: 90px 20px;
+      padding: 110px 20px 60px;
     }
 
+    /* HERO */
     h1 {
+      font-size: 34px;
+      font-weight: 600;
       text-align: center;
-      font-size: 36px;
-      margin-bottom: 10px;
+      margin-bottom: 6px;
     }
 
     .subtitle {
       text-align: center;
-      color: #aaa;
+      color: #7d8590;
+      font-size: 14px;
       margin-bottom: 30px;
     }
 
-    .profile-pic {
-      width: 150px;
-      height: 150px;
+    .profile {
+      text-align: center;
+    }
+
+    .profile img {
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
       object-fit: cover;
-      display: block;
-      margin: 20px auto;
-      border: 2px solid #333;
+      border: 1px solid #2a2f3a;
+      margin-bottom: 20px;
     }
 
     .intro {
-      background: #151922;
-      padding: 16px;
-      border-radius: 10px;
-      border: 1px solid #222;
-      margin-bottom: 40px;
-      line-height: 1.6;
+      background: #11151c;
+      border: 1px solid #1f2633;
+      border-radius: 12px;
+      padding: 18px;
+      font-size: 14px;
+      line-height: 1.7;
+      color: #cbd5e1;
+      margin-bottom: 50px;
     }
 
     /* TIMELINE */
@@ -78,63 +91,71 @@
     }
 
     .timeline::before {
-      content: '';
+      content: "";
       position: absolute;
-      width: 2px;
-      background: #333;
+      left: 18px;
       top: 0;
       bottom: 0;
-      left: 20px;
+      width: 1px;
+      background: #232836;
     }
 
-    .event {
-      margin-bottom: 40px;
-      padding-left: 60px;
+    .item {
+      position: relative;
+      padding-left: 55px;
+      margin-bottom: 28px;
 
       opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.6s ease-in-out;
+      transform: translateY(16px);
+      transition: all 0.5s ease;
     }
 
-    .event.show {
+    .item.show {
       opacity: 1;
       transform: translateY(0);
     }
 
     .dot {
       position: absolute;
-      left: 12px;
-      width: 16px;
-      height: 16px;
-      background: #7aa2ff;
+      left: 11px;
+      top: 6px;
+      width: 14px;
+      height: 14px;
+      background: #4f7cff;
       border-radius: 50%;
-      margin-top: 5px;
+      box-shadow: 0 0 12px rgba(79,124,255,0.4);
+    }
+
+    .card {
+      background: linear-gradient(180deg, #121722, #0f131b);
+      border: 1px solid #1f2633;
+      border-radius: 12px;
+      padding: 14px 16px;
+      transition: 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: #2a3550;
     }
 
     .year {
-      color: #7aa2ff;
-      font-weight: bold;
-      font-size: 13px;
+      font-size: 12px;
+      color: #7d8590;
+      margin-bottom: 4px;
     }
 
     .title {
-      font-size: 15px;
-      font-weight: bold;
-      margin-top: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #e6e6e6;
+      margin-bottom: 6px;
     }
 
     .desc {
       font-size: 13px;
-      color: #ccc;
-      margin-top: 6px;
-      line-height: 1.5;
-    }
-
-    /* ICON BADGES */
-    .icon {
-      display: inline-block;
-      font-size: 14px;
-      margin-right: 6px;
+      color: #aab4c0;
+      line-height: 1.6;
     }
 
   </style>
@@ -142,6 +163,7 @@
 
 <body>
 
+<!-- NAV -->
 <div class="nav">
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
@@ -151,115 +173,118 @@
 
 <section>
 
-<h1>My Journey</h1>
-<div class="subtitle">Leadership • Supply Chain • Global Transformation</div>
+<h1>Professional Journey</h1>
+<div class="subtitle">Supply Chain · Lifecycle Strategy · Global MedTech Transformation</div>
 
-<img src="pic.jpg" class="profile-pic">
+<div class="profile">
+  <img src="pic.jpg" alt="Preeti Sharma">
+</div>
 
 <div class="intro">
-A career shaped by discipline, performance, and transformation — evolving from sports and customer operations in India to global MedTech lifecycle leadership at Philips in the Netherlands.
+A structured career spanning automotive, social governance, and global MedTech lifecycle leadership — evolving from operational execution roles in India to strategic supply chain transformation at Philips Healthcare in the Netherlands.
 </div>
 
 <!-- TIMELINE -->
 
 <div class="timeline">
 
-  <div class="event">
+  <div class="item">
     <div class="dot"></div>
-    <div class="year">1986</div>
-    <div class="title"><span class="icon">🌱</span>Born</div>
-    <div class="desc">Born on 1st July 1986 — foundation of discipline and resilience.</div>
+    <div class="card">
+      <div class="year">1986</div>
+      <div class="title">Early Foundations</div>
+      <div class="desc">Born on 1st July 1986. Built early discipline, resilience, and leadership mindset.</div>
+    </div>
   </div>
 
-  <div class="event">
+  <div class="item">
     <div class="dot"></div>
-    <div class="year">2005</div>
-    <div class="title"><span class="icon">🏀</span>National Basketball Player</div>
-    <div class="desc">Represented India in National Basketball Championship — building leadership, teamwork, and competitive mindset.</div>
+    <div class="card">
+      <div class="year">2005</div>
+      <div class="title">National Sports Representation</div>
+      <div class="desc">Represented India in National Basketball Championship, developing competitive leadership and teamwork mindset.</div>
+    </div>
   </div>
 
-  <div class="event">
+  <div class="item">
     <div class="dot"></div>
-    <div class="year">2009</div>
-    <div class="title"><span class="icon">🎓</span>B.Com Completed</div>
-    <div class="desc">Strong foundation in commerce and business fundamentals.</div>
+    <div class="card">
+      <div class="year">2008–2014</div>
+      <div class="title">Hyundai Motor India</div>
+      <div class="desc">Customer Relations Manager managing service operations and customer lifecycle experience.</div>
+    </div>
   </div>
 
-  <div class="event">
+  <div class="item">
     <div class="dot"></div>
-    <div class="year">2008–2014</div>
-    <div class="title"><span class="icon">🚗</span>Hyundai Motor India</div>
-    <div class="desc">Customer Relations Manager managing service operations and customer experience.</div>
+    <div class="card">
+      <div class="year">2014–2018</div>
+      <div class="title">Angel Quality Solutions (US Org)</div>
+      <div class="desc">Managed administration and operations across business workflows and client coordination.</div>
+    </div>
   </div>
 
-  <div class="event">
+  <div class="item">
     <div class="dot"></div>
-    <div class="year">2014–2018</div>
-    <div class="title"><span class="icon">🏢</span>Angel Quality Solutions</div>
-    <div class="desc">Manager Admin in US-based company handling operations and coordination.</div>
+    <div class="card">
+      <div class="year">2018–2021</div>
+      <div class="title">Navjyoti India Foundation</div>
+      <div class="desc">Deputy Manager under Hon’ble Dr. Kiran Bedi leading governance and operational excellence initiatives.</div>
+    </div>
   </div>
 
-  <div class="event">
+  <div class="item">
     <div class="dot"></div>
-    <div class="year">2017</div>
-    <div class="title"><span class="icon">🎓</span>M.Com Completed</div>
-    <div class="desc">Advanced commerce and financial systems knowledge.</div>
+    <div class="card">
+      <div class="year">2022–2023</div>
+      <div class="title">Corporate Gurukul</div>
+      <div class="desc">Strategic Projects Lead driving procurement analytics and cost optimization across APAC & MEA.</div>
+    </div>
   </div>
 
-  <div class="event">
+  <div class="item">
     <div class="dot"></div>
-    <div class="year">2018–2021</div>
-    <div class="title"><span class="icon">👩‍⚖️</span>Navjyoti India Foundation</div>
-    <div class="desc">Deputy Manager under Hon’ble Dr. Kiran Bedi — governance, operations, and social impact leadership.</div>
+    <div class="card">
+      <div class="year">2023</div>
+      <div class="title">Netherlands – MBA Journey</div>
+      <div class="desc">Moved to pursue MBA in Supply Chain Management to gain global exposure and cross-cultural business experience.</div>
+    </div>
   </div>
 
-  <div class="event">
+  <div class="item">
     <div class="dot"></div>
-    <div class="year">2021–2022</div>
-    <div class="title"><span class="icon">💼</span>Techexpertz</div>
-    <div class="desc">Executive Assistant supporting leadership and operations.</div>
+    <div class="card">
+      <div class="year">Feb 2024</div>
+      <div class="title">Philips Internship</div>
+      <div class="desc">Supply Chain Intern at Philips Healthcare, Eindhoven contributing to lifecycle initiatives.</div>
+    </div>
   </div>
 
-  <div class="event">
+  <div class="item">
     <div class="dot"></div>
-    <div class="year">2022–2023</div>
-    <div class="title"><span class="icon">📊</span>Corporate Gurukul</div>
-    <div class="desc">Strategic Projects Lead managing procurement and analytics across APAC & MEA.</div>
+    <div class="card">
+      <div class="year">Sep 2024</div>
+      <div class="title">MBA Completion</div>
+      <div class="desc">Completed MBA in Supply Chain Management from Maastricht University.</div>
+    </div>
   </div>
 
-  <div class="event">
+  <div class="item">
     <div class="dot"></div>
-    <div class="year">2023</div>
-    <div class="title"><span class="icon">✈️</span>Move to Netherlands</div>
-    <div class="desc">Pursued MBA in Supply Chain Management for global exposure and diversity experience.</div>
+    <div class="card">
+      <div class="year">Feb 2025</div>
+      <div class="title">NOK Process Implementation</div>
+      <div class="desc">Philips adopted NOK handling process designed during internship — now part of operational workflow.</div>
+    </div>
   </div>
 
-  <div class="event">
+  <div class="item">
     <div class="dot"></div>
-    <div class="year">Feb 2024</div>
-    <div class="title"><span class="icon">🏥</span>Philips Internship</div>
-    <div class="desc">Supply Chain Intern at Philips Healthcare, Eindhoven.</div>
-  </div>
-
-  <div class="event">
-    <div class="dot"></div>
-    <div class="year">Sep 2024</div>
-    <div class="title"><span class="icon">🎓</span>MBA Completed</div>
-    <div class="desc">Completed MBA in Supply Chain Management at Maastricht University.</div>
-  </div>
-
-  <div class="event">
-    <div class="dot"></div>
-    <div class="year">Feb 2025</div>
-    <div class="title"><span class="icon">⚙️</span>NOK Process Implementation</div>
-    <div class="desc">Philips adopted NOK handling process designed during internship.</div>
-  </div>
-
-  <div class="event">
-    <div class="dot"></div>
-    <div class="year">Oct 2024 – Present</div>
-    <div class="title"><span class="icon">🌍</span>Lifecycle Manager – Philips</div>
-    <div class="desc">Leading global EOL strategy, inventory optimization, and lifecycle governance.</div>
+    <div class="card">
+      <div class="year">Oct 2024 – Present</div>
+      <div class="title">Lifecycle Manager – Philips</div>
+      <div class="desc">Leading global EOL strategy, inventory optimization, and lifecycle governance for MedTech portfolio.</div>
+    </div>
   </div>
 
 </div>
@@ -267,7 +292,7 @@ A career shaped by discipline, performance, and transformation — evolving from
 </section>
 
 <script>
-const items = document.querySelectorAll('.event');
+const items = document.querySelectorAll('.item');
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -275,11 +300,9 @@ const observer = new IntersectionObserver(entries => {
       entry.target.classList.add('show');
     }
   });
-}, { threshold: 0.2 });
+}, { threshold: 0.15 });
 
-items.forEach(item => {
-  observer.observe(item);
-});
+items.forEach(i => observer.observe(i));
 </script>
 
 </body>

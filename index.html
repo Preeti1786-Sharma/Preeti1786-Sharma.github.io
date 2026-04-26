@@ -22,7 +22,7 @@
       background: rgba(15,17,21,0.95);
       display: flex;
       justify-content: center;
-      gap: 22px;
+      gap: 20px;
       padding: 10px;
       border-bottom: 1px solid #222;
       z-index: 1000;
@@ -38,12 +38,12 @@
     .nav a:hover { color: #fff; }
 
     section {
-      max-width: 950px;
+      max-width: 1100px;
       margin: auto;
       padding: 70px 20px;
     }
 
-    h1 { font-size: 40px; margin-bottom: 5px; }
+    h1 { font-size: 38px; margin-bottom: 5px; }
 
     h2 {
       font-size: 17px;
@@ -63,10 +63,24 @@
       color: #d1d5db;
     }
 
+    /* GRID FIXED */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 12px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1000px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     .card {
@@ -165,13 +179,13 @@
 
     <div class="card">
       <div class="role">Lifecycle Manager</div>
-      <div class="company">Philips Medical Systems Nederland B.V. · Best, Netherlands</div>
+      <div class="company">Philips Medical Systems Nederland B.V.</div>
       <div>Oct 2024 – Present</div>
       <ul>
-        <li>Own EOL and obsolescence strategy for global MedTech portfolio</li>
-        <li>Improved forecast accuracy (MAPE 62% → 78%)</li>
-        <li>Reduced excess & obsolete inventory by 20%</li>
-        <li>Reduced decision cycle time from 2 months to 20 days</li>
+        <li>Own EOL and obsolescence strategy</li>
+        <li>Improved forecast accuracy (62% → 78%)</li>
+        <li>Reduced excess inventory by 20%</li>
+        <li>Reduced decision cycle time</li>
       </ul>
     </div>
 
@@ -180,30 +194,30 @@
       <div class="company">Philips Medical Systems Nederland B.V.</div>
       <div>Feb 2024 – Sep 2024</div>
       <ul>
-        <li>Designed NOK handling process reducing disruptions by 96%</li>
-        <li>Selected for full-time role based on performance</li>
+        <li>Designed NOK process (96% improvement)</li>
+        <li>Converted to full-time role</li>
       </ul>
     </div>
 
     <div class="card">
-      <div class="role">Executive Associate & Strategic Projects Lead</div>
+      <div class="role">Strategic Projects Lead</div>
       <div class="company">Corporate Gurukul</div>
-      <div>Oct 2022 – Aug 2023</div>
+      <div>2022 – 2023</div>
       <ul>
-        <li>Managed procurement across APAC and MEA regions</li>
-        <li>Delivered 10–15% cost savings on €2M spend</li>
-        <li>Built Power BI dashboards for spend visibility</li>
+        <li>Managed procurement APAC & MEA</li>
+        <li>Delivered 10–15% savings</li>
+        <li>Built Power BI dashboards</li>
       </ul>
     </div>
 
     <div class="card">
       <div class="role">Deputy Manager</div>
       <div class="company">Navjyoti India Foundation</div>
-      <div>Feb 2019 – Sep 2021</div>
+      <div>2019 – 2021</div>
       <ul>
-        <li>Managed supply chain and logistics operations</li>
-        <li>Improved service levels and operational efficiency</li>
-        <li>Ensured compliance with zero audit non-conformances</li>
+        <li>Managed supply chain operations</li>
+        <li>Improved service levels</li>
+        <li>Zero audit non-conformances</li>
       </ul>
     </div>
 

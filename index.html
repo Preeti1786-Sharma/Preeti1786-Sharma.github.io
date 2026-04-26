@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Preeti Sharma | Lifecycle Manager</title>
+  <title>About Me | Preeti Sharma</title>
 
   <style>
-    html { scroll-behavior: smooth; }
-
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -13,177 +11,62 @@
       color: #e6e6e6;
     }
 
-    /* NAV */
     .nav {
       position: fixed;
-      top: 0;
       width: 100%;
-      background: rgba(15,17,21,0.95);
+      background: #0f1115;
       display: flex;
       justify-content: center;
       gap: 20px;
       padding: 10px;
       border-bottom: 1px solid #222;
-      z-index: 1000;
     }
 
     .nav a {
       color: #aaa;
       text-decoration: none;
       font-size: 13px;
-      font-weight: 600;
     }
-
-    .nav a:hover { color: #fff; }
 
     section {
-      max-width: 1100px;
+      max-width: 900px;
       margin: auto;
-      padding: 25px 20px;
+      padding: 80px 20px;
     }
 
-    h1 { font-size: 38px; margin-bottom: 5px; }
+    h1 { font-size: 36px; }
 
-    h2 {
-      font-size: 16px;
-      border-bottom: 1px solid #333;
+    .hero {
+      text-align: center;
+    }
+
+    .hero img {
+      width: 160px;
+      border-radius: 50%;
       margin-top: 20px;
-      margin-bottom: 10px;
-      padding-bottom: 4px;
     }
 
-    .subtitle { color: #aaa; }
-
-    .box {
-      background: #151922;
-      padding: 12px;
-      border-radius: 10px;
-      border: 1px solid #222;
-      margin-bottom: 10px;
-    }
-
-    /* GRID */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-    }
-
-    @media (max-width: 1000px) {
-      .grid { grid-template-columns: repeat(2, 1fr); }
-    }
-
-    @media (max-width: 600px) {
-      .grid { grid-template-columns: 1fr; }
-    }
-
-    /* CARDS */
-    .card {
-      background: #151922;
-      border: 1px solid #222;
-      padding: 14px;
-      border-radius: 12px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: 0.3s;
-      cursor: pointer;
-    }
-
-    .card:hover {
-      transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.5);
-    }
-
-    .role { font-weight: bold; }
-    .company { color: #aaa; font-size: 13px; }
-
-    ul {
-      padding-left: 18px;
-      margin-top: 8px;
-      flex-grow: 1;
-    }
-
-    li { margin-bottom: 5px; }
-
-    /* KPI STRIP */
-    .kpi {
-      background: #1f2937;
-      padding: 8px;
-      border-radius: 8px;
-      font-size: 12px;
-      margin-top: 8px;
-      color: #cbd5e1;
-    }
-
-    /* CERT IMAGES */
-    img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 8px;
-    }
-
-    /* MODAL */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 2000;
-      padding-top: 60px;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.9);
-    }
-
-    .modal-content {
-      display: block;
-      margin: auto;
-      max-width: 80%;
-      border-radius: 10px;
-    }
-
-    .close {
-      position: absolute;
-      top: 20px;
-      right: 35px;
-      color: white;
-      font-size: 30px;
-      cursor: pointer;
-    }
-
-    /* TIMELINE */
     .timeline {
       border-left: 2px solid #333;
-      padding-left: 15px;
+      padding-left: 20px;
+      margin-top: 30px;
     }
 
     .event {
-      margin-bottom: 12px;
+      margin-bottom: 20px;
     }
 
     .year {
       color: #7aa2ff;
-      font-size: 13px;
+      font-weight: bold;
     }
 
-    /* BUTTONS */
-    .cta {
-      text-align: center;
-      margin-top: 20px;
+    .box {
+      background: #151922;
+      padding: 14px;
+      border-radius: 10px;
+      margin-top: 15px;
     }
-
-    .btn {
-      display: inline-block;
-      padding: 10px 16px;
-      margin: 10px;
-      background: #1f2937;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-    }
-
-    .btn:hover { background: #374151; }
 
   </style>
 </head>
@@ -191,142 +74,55 @@
 <body>
 
 <div class="nav">
-  <a href="#home">Home</a>
-  <a href="#skills">Skills</a>
-  <a href="#exp">Experience</a>
-  <a href="#cert">Certifications</a>
+  <a href="index.html">Home</a>
   <a href="projects.html">Case Studies</a>
   <a href="resume.html">Resume</a>
 </div>
 
-<section id="home">
+<section>
 
-<h1>Preeti Sharma</h1>
-<div class="subtitle">Lifecycle Manager | Philips Medical Systems Nederland B.V.</div>
-
-<h2>Professional Summary</h2>
-<div class="box">
-Supply Chain & Lifecycle Management professional with 6+ years of international experience across MedTech and high-tech environments, currently driving end-of-life (EOL) and obsolescence strategy at Philips. Experienced in managing global hardware portfolios, improving forecast accuracy, and optimizing working capital in regulated environments (GMP/GDP/QMS). Proven track record in cross-functional decision-making, supplier coordination, and process standardization. MBA in Supply Chain Management from Maastricht University, Lean Six Sigma Green Belt, and Certified ScrumMaster.
+<div class="hero">
+<h1>About Me</h1>
+<img src="your_photo.jpg">
 </div>
 
-<h2>About Me</h2>
+<div class="box">
+Driven by systems thinking, I approach supply chain and lifecycle management as interconnected ecosystems...
+</div>
+
+<h2>Journey</h2>
+
 <div class="timeline">
-  <div class="event"><span class="year">2024–Present</span> Lifecycle Manager – Philips</div>
-  <div class="event"><span class="year">2024</span> Supply Chain Intern – Philips</div>
-  <div class="event"><span class="year">2023</span> MBA – Maastricht University</div>
-  <div class="event"><span class="year">2022–2023</span> Corporate Gurukul</div>
-  <div class="event"><span class="year">2019–2021</span> Navjyoti India Foundation</div>
+
+<div class="event">
+<div class="year">2024–Present</div>
+Lifecycle Manager – Philips
 </div>
 
-</section>
+<div class="event">
+<div class="year">2023</div>
+MBA – Maastricht University
+</div>
 
-<section id="skills">
-<h2>Core Competencies</h2>
+<div class="event">
+<div class="year">2019–2021</div>
+Navjyoti India Foundation
+</div>
+
+</div>
+
+<h2>Achievements</h2>
 <div class="box">
-EOL & Obsolescence Strategy · S&OP · SAP · Power BI · Inventory Optimisation · Procurement · Lean Six Sigma · CAPA · Compliance
+• Improved forecast accuracy to 78%  
+• Reduced inventory by 20%  
 </div>
+
+<h2>Interests</h2>
+<div class="box">
+Basketball (former national player), analytics, travel
+</div>
+
 </section>
 
-<section id="exp">
-<h2>Professional Experience</h2>
-
-<div class="grid">
-
-<div class="card">
-<div>
-<div class="role">Lifecycle Manager</div>
-<div class="company">Philips</div>
-<ul>
-<li>Forecast accuracy improved</li>
-<li>Inventory reduced 20%</li>
-</ul>
-</div>
-<div class="kpi">MAPE ↑ | Inventory ↓ | Cycle Time ↓</div>
-</div>
-
-<div class="card">
-<div>
-<div class="role">Supply Chain Intern</div>
-<div class="company">Philips</div>
-<ul>
-<li>NOK process improved 96%</li>
-</ul>
-</div>
-<div class="kpi">Operational Stability ↑</div>
-</div>
-
-<div class="card">
-<div>
-<div class="role">Strategic Projects Lead</div>
-<div class="company">Corporate Gurukul</div>
-<ul>
-<li>10–15% savings</li>
-</ul>
-</div>
-<div class="kpi">Cost Efficiency ↑</div>
-</div>
-
-<div class="card">
-<div>
-<div class="role">Deputy Manager</div>
-<div class="company">Navjyoti India Foundation</div>
-<ul>
-<li>Zero audit issues</li>
-</ul>
-</div>
-<div class="kpi">Compliance 100%</div>
-</div>
-
-</div>
-</section>
-
-<section id="cert">
-<h2>Certifications</h2>
-
-<div class="grid">
-
-<div class="card" onclick="openModal('scm.jpg')">
-<img src="scm.jpg">Supply Chain Management
-</div>
-
-<div class="card" onclick="openModal('scrum.jpg')">
-<img src="scrum.jpg">ScrumMaster
-</div>
-
-<div class="card" onclick="openModal('powerbi.jpg')">
-<img src="powerbi.jpg">Power BI
-</div>
-
-<div class="card" onclick="openModal('lssgb.jpg')">
-<img src="lssgb.jpg">Lean Six Sigma
-</div>
-
-</div>
-</section>
-
-<div class="cta">
-<a class="btn" href="projects.html">Case Studies</a>
-<a class="btn" href="resume.html">View Resume</a>
-</div>
-
-<!-- MODAL -->
-<div id="modal" class="modal" onclick="closeModal()">
-<span class="close">&times;</span>
-<img class="modal-content" id="modal-img">
-</div>
-
-<script>
-function openModal(src) {
-  document.getElementById("modal").style.display = "block";
-  document.getElementById("modal-img").src = src;
-}
-
-function closeModal() {
-  document.getElementById("modal").style.display = "none";
-}
-</script>
-
-</body>
-</html>
 </body>
 </html>

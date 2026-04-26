@@ -14,7 +14,7 @@
       line-height: 1.6;
     }
 
-    /* ================= NAV ================= */
+    /* NAV */
     .nav {
       position: fixed;
       top: 0;
@@ -36,7 +36,6 @@
       font-weight: 600;
       position: relative;
       padding-bottom: 4px;
-      transition: 0.3s;
     }
 
     .nav-link::after {
@@ -47,21 +46,20 @@
       height: 2px;
       width: 0%;
       background: #7aa2ff;
-      transition: 0.3s ease;
+      transition: 0.3s;
     }
 
-    .nav-link:hover { color: #fff; }
-    .nav-link:hover::after { width: 100%; }
-
+    .nav-link:hover,
     .nav-link.active {
       color: #fff;
     }
 
+    .nav-link:hover::after,
     .nav-link.active::after {
       width: 100%;
     }
 
-    /* ================= SECTIONS ================= */
+    /* SECTIONS */
     section {
       max-width: 950px;
       margin: auto;
@@ -79,9 +77,9 @@
 
     p { color: #d0d0d0; }
 
-    .subtitle { color: #aaa; margin-top: 6px; }
+    .subtitle { color: #aaa; }
 
-    /* ================= CARDS ================= */
+    /* GRID */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -93,18 +91,11 @@
       border: 1px solid #222;
       padding: 14px;
       border-radius: 12px;
-      transition: 0.4s;
-      opacity: 0;
-      transform: translateY(20px);
-    }
-
-    .card.show {
-      opacity: 1;
-      transform: translateY(0);
+      transition: 0.3s;
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-4px);
       box-shadow: 0 10px 25px rgba(0,0,0,0.4);
     }
 
@@ -120,6 +111,21 @@
       color: #cbd5e1;
     }
 
+    .box {
+      background: #151922;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #222;
+      font-size: 13px;
+      color: #d1d5db;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
     .btn {
       display: inline-block;
       padding: 9px 14px;
@@ -132,15 +138,6 @@
     }
 
     .btn:hover { background: #374151; }
-
-    .box {
-      background: #151922;
-      padding: 12px;
-      border-radius: 10px;
-      border: 1px solid #222;
-      font-size: 13px;
-      color: #d1d5db;
-    }
 
   </style>
 </head>
@@ -159,29 +156,32 @@
 
 <!-- HOME -->
 <section id="home">
+
   <h1>Preeti Sharma</h1>
   <div class="subtitle">Lifecycle Manager | Philips MedTech | Azurion Portfolio</div>
 
   <p>
-    Supply Chain & Lifecycle Management professional with 6+ years of experience across MedTech and high-tech environments, currently driving EOL and obsolescence strategy at Philips.
+    Supply Chain & Lifecycle Management professional with 6+ years of international experience across MedTech and high-tech environments, currently driving EOL and obsolescence strategy at Philips.
   </p>
 
   <div class="box">
     ERP/Systems: SAP (MM, WM), Tableau, Advanced Excel<br>
     Methodologies: Lean Six Sigma, Scrum/Agile, CAPA, GMP/GDP, ISO, QMS
   </div>
+
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
   <h2>Core Competencies</h2>
   <div class="box">
-    EOL Strategy · S&OP · SAP · Power BI · Inventory Optimisation · Compliance · Procurement · Lean Six Sigma · CAPA
+    EOL Strategy · S&OP · SAP · Power BI · Inventory Optimisation · Procurement · Lean Six Sigma · CAPA · Compliance
   </div>
 </section>
 
 <!-- EXPERIENCE -->
 <section id="exp">
+
   <h2>Experience</h2>
 
   <div class="grid">
@@ -199,68 +199,39 @@
     </div>
 
   </div>
+
 </section>
 
-<!-- CERTIFICATIONS -->
+<!-- CERTIFICATIONS (RESTORED - IMPORTANT FIX) -->
 <section id="cert">
+
   <h2>Certifications</h2>
 
   <div class="grid">
 
     <div class="card">
-      <div class="role-title">Supply Chain</div>
+      <img src="scm.jpg">
+      <div class="role-title">Supply Chain Management</div>
     </div>
 
     <div class="card">
+      <img src="scrum.jpg">
       <div class="role-title">Scrum Master</div>
     </div>
 
     <div class="card">
+      <img src="powerbi.jpg">
       <div class="role-title">Power BI</div>
     </div>
 
     <div class="card">
+      <img src="lssgb.jpg">
       <div class="role-title">Lean Six Sigma</div>
     </div>
 
   </div>
+
 </section>
-
-<script>
-/* SCROLL SPY */
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-link");
-
-window.addEventListener("scroll", () => {
-  let current = "";
-
-  sections.forEach(section => {
-    if (pageYOffset >= section.offsetTop - 120) {
-      current = section.getAttribute("id");
-    }
-  });
-
-  navLinks.forEach(link => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === "#" + current) {
-      link.classList.add("active");
-    }
-  });
-});
-
-/* SCROLL REVEAL */
-const cards = document.querySelectorAll(".card");
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add("show");
-    }
-  });
-});
-
-cards.forEach(card => observer.observe(card));
-</script>
 
 </body>
 </html>

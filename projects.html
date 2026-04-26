@@ -3,72 +3,147 @@
 <head>
   <title>Case Studies | Preeti Sharma</title>
 
+  <!-- SAME ELITE FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f1115;
+      font-family: "Inter", Arial, sans-serif;
+      background: #0b0d10;
       color: #e6e6e6;
-      line-height: 1.6;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
     }
 
+    /* NAV */
     .nav {
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(15,17,21,0.95);
+      background: rgba(11,13,16,0.85);
+      backdrop-filter: blur(12px);
       display: flex;
       justify-content: center;
-      gap: 25px;
+      gap: 22px;
       padding: 12px;
-      border-bottom: 1px solid #222;
+      border-bottom: 1px solid #1c1f26;
       z-index: 1000;
-      backdrop-filter: blur(10px);
     }
 
     .nav a {
-      color: #aaa;
+      color: #9aa4b2;
       text-decoration: none;
       font-size: 13px;
-      font-weight: bold;
     }
+
+    .nav a:hover { color: #fff; }
 
     section {
-      max-width: 950px;
+      max-width: 980px;
       margin: auto;
-      padding: 90px 20px;
+      padding: 110px 20px 60px;
     }
 
-    h1 { font-size: 40px; }
+    h1 {
+      font-size: 36px;
+      text-align: center;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+    }
+
+    /* CASE CARD */
+    .case {
+      background: #11151c;
+      border: 1px solid #1f2633;
+      border-radius: 14px;
+      padding: 18px;
+      margin-top: 18px;
+      transition: 0.3s;
+    }
+
+    .case:hover {
+      transform: translateY(-4px);
+      border-color: #2a3550;
+    }
 
     h2 {
-      border-bottom: 1px solid #333;
-      padding-bottom: 6px;
-      margin-top: 30px;
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #fff;
     }
 
-    .card {
-      background: #151922;
-      border: 1px solid #222;
-      padding: 16px;
-      border-radius: 12px;
-      margin-top: 20px;
+    .label {
+      font-size: 12px;
+      color: #7d8590;
+      margin-top: 10px;
     }
 
+    /* KPI */
+    .kpi {
+      display: inline-block;
+      background: linear-gradient(180deg, #11151c, #0f131b);
+      border: 1px solid #1f2633;
+      padding: 8px 12px;
+      border-radius: 10px;
+      font-size: 13px;
+      margin-top: 10px;
+      color: #cbd5e1;
+    }
+
+    /* IMAGE */
     img {
       width: 100%;
-      border-radius: 10px;
-      margin-top: 10px;
+      border-radius: 12px;
+      margin-top: 12px;
       cursor: pointer;
+      transition: 0.25s;
     }
 
-    .kpi {
-      background: #111827;
-      padding: 10px;
-      border-radius: 8px;
-      margin-top: 10px;
-      font-size: 12px;
+    img:hover {
+      transform: scale(1.01);
     }
+
+    /* REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: all 0.6s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* MODAL */
+    #modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.85);
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+    }
+
+    #modal img {
+      max-width: 85%;
+      max-height: 85%;
+      border-radius: 12px;
+      border: 1px solid #333;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 28px;
+      cursor: pointer;
+      color: #fff;
+    }
+
   </style>
 </head>
 
@@ -76,31 +151,93 @@
 
 <div class="nav">
   <a href="index.html">Home</a>
+  <a href="about.html">About</a>
   <a href="projects.html">Case Studies</a>
   <a href="resume.html">Resume</a>
 </div>
 
 <section>
 
-<h1>Case Studies</h1>
+<h1 class="reveal">Case Studies</h1>
 
-<div class="card">
-  <h2>EOL Strategy</h2>
-  <div class="kpi">Inventory Reduction 20%</div>
+<!-- CASE 1 -->
+<div class="case reveal">
+  <h2>EOL Strategy Transformation – MedTech Portfolio</h2>
+
+  <div class="label">PROBLEM</div>
+  <p>Low forecast accuracy and high inventory exposure in global lifecycle portfolio.</p>
+
+  <div class="label">ACTION</div>
+  <p>Implemented structured EOL governance model with cross-functional alignment across supply chain, finance, and operations.</p>
+
+  <div class="label">IMPACT</div>
+  <div class="kpi">Forecast Accuracy: 62% → 78%</div>
+  <div class="kpi">Inventory Reduction: 20%</div>
+  <div class="kpi">Decision Cycle: 2 months → 20 days</div>
 </div>
 
-<div class="card">
-  <h2>NOK Process</h2>
-  <img src="nok_process.png">
-  <div class="kpi">96% improvement</div>
+<!-- CASE 2 -->
+<div class="case reveal">
+  <h2>NOK Process Transformation – Philips</h2>
+
+  <div class="label">PROBLEM</div>
+  <p>Frequent operational disruptions due to inconsistent NOK handling processes.</p>
+
+  <div class="label">ACTION</div>
+  <p>Designed standardized QMS-based NOK workflow integrated with supply chain operations.</p>
+
+  <div class="label">IMPACT</div>
+  <div class="kpi">Operational Disruptions Reduced by 96%</div>
+
+  <img src="nok_process.png" onclick="openModal(this.src)">
 </div>
 
-<div class="card">
-  <h2>Power BI Dashboard</h2>
-  <img src="powerbi_dashboard.jpg">
+<!-- CASE 3 -->
+<div class="case reveal">
+  <h2>Power BI Dashboard – Sales & Profitability (Certification Project)</h2>
+
+  <div class="label">CONTEXT</div>
+  <p>Self-initiated analytics project for Power BI certification demonstrating end-to-end business intelligence capability.</p>
+
+  <div class="label">OUTPUT</div>
+  <p>Interactive dashboard covering revenue trends, profitability insights, and category performance.</p>
+
+  <div class="kpi">Analytics + Visualization + Business Insight Storytelling</div>
+
+  <img src="powerbi_dashboard.jpg" onclick="openModal(this.src)">
 </div>
 
 </section>
+
+<!-- MODAL -->
+<div id="modal">
+  <span class="close" onclick="closeModal()">×</span>
+  <img id="modalImg">
+</div>
+
+<script>
+function openModal(src) {
+  document.getElementById("modal").style.display = "flex";
+  document.getElementById("modalImg").src = src;
+}
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+
+/* scroll reveal */
+const items = document.querySelectorAll('.reveal');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.15 });
+
+items.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>

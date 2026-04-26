@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Me | Preeti Sharma</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f1115;
+      color: #e6e6e6;
+    }
+
+    .nav {
+      position: fixed;
+      width: 100%;
+      background: #0f1115;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+      border-bottom: 1px solid #222;
+    }
+
+    .nav a {
+      color: #aaa;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 80px 20px;
+    }
+
+    h1 { font-size: 36px; }
+
+    .hero {
+      text-align: center;
+    }
+
+    .hero img {
+      width: 160px;
+      border-radius: 50%;
+      margin-top: 20px;
+    }
+
+    .timeline {
+      border-left: 2px solid #333;
+      padding-left: 20px;
+      margin-top: 30px;
+    }
+
+    .event {
+      margin-bottom: 20px;
+    }
+
+    .year {
+      color: #7aa2ff;
+      font-weight: bold;
+    }
+
+    .box {
+      background: #151922;
+      padding: 14px;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div class="nav">
+  <a href="index.html">Home</a>
+  <a href="projects.html">Case Studies</a>
+  <a href="resume.html">Resume</a>
+</div>
+
+<section>
+
+<div class="hero">
+<h1>About Me</h1>
+<img src="your_photo.jpg">
+</div>
+
+<div class="box">
+Driven by systems thinking, I approach supply chain and lifecycle management as interconnected ecosystems...
+</div>
+
+<h2>Journey</h2>
+
+<div class="timeline">
+
+<div class="event">
+<div class="year">2024–Present</div>
+Lifecycle Manager – Philips
+</div>
+
+<div class="event">
+<div class="year">2023</div>
+MBA – Maastricht University
+</div>
+
+<div class="event">
+<div class="year">2019–2021</div>
+Navjyoti India Foundation
+</div>
+
+</div>
+
+<h2>Achievements</h2>
+<div class="box">
+• Improved forecast accuracy to 78%  
+• Reduced inventory by 20%  
+</div>
+
+<h2>Interests</h2>
+<div class="box">
+Basketball (former national player), analytics, travel
+</div>
+
+</section>
+
+</body>
+</html>

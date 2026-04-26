@@ -37,33 +37,38 @@
     section {
       max-width: 1000px;
       margin: auto;
-      padding: 90px 20px 40px;
+      padding: 90px 20px;
     }
 
     h1 {
-      font-size: 36px;
       text-align: center;
+      font-size: 36px;
       margin-bottom: 10px;
     }
 
     .subtitle {
       text-align: center;
       color: #aaa;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
-    /* HERO */
-    .hero {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-
-    .hero img {
-      width: 140px;
-      height: 140px;
+    .profile-pic {
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 20px auto;
       border: 2px solid #333;
-      margin-top: 10px;
+    }
+
+    .intro {
+      background: #151922;
+      padding: 16px;
+      border-radius: 10px;
+      border: 1px solid #222;
+      margin-bottom: 40px;
+      line-height: 1.6;
     }
 
     /* TIMELINE */
@@ -79,107 +84,57 @@
       background: #333;
       top: 0;
       bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 20px;
     }
 
-    .item {
-      padding: 20px;
-      position: relative;
-      width: 50%;
+    .event {
+      margin-bottom: 40px;
+      padding-left: 60px;
+
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-in-out;
     }
 
-    .item .content {
-      background: #151922;
-      padding: 16px;
-      border-radius: 10px;
-      border: 1px solid #222;
+    .event.show {
+      opacity: 1;
+      transform: translateY(0);
     }
 
-    .item h3 {
-      margin: 0;
-      font-size: 16px;
+    .dot {
+      position: absolute;
+      left: 12px;
+      width: 16px;
+      height: 16px;
+      background: #7aa2ff;
+      border-radius: 50%;
+      margin-top: 5px;
     }
 
-    .item span {
+    .year {
       color: #7aa2ff;
+      font-weight: bold;
       font-size: 13px;
     }
 
-    .item p {
+    .title {
+      font-size: 15px;
+      font-weight: bold;
+      margin-top: 4px;
+    }
+
+    .desc {
       font-size: 13px;
       color: #ccc;
-      margin-top: 8px;
+      margin-top: 6px;
       line-height: 1.5;
     }
 
-    /* LEFT */
-    .left {
-      left: 0;
-      text-align: right;
-    }
-
-    .left .content {
-      margin-right: 20px;
-    }
-
-    /* RIGHT */
-    .right {
-      left: 50%;
-    }
-
-    .right .content {
-      margin-left: 20px;
-    }
-
-    /* DOT */
-    .item::after {
-      content: '';
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      background: #7aa2ff;
-      border-radius: 50%;
-      top: 25px;
-      z-index: 1;
-    }
-
-    .left::after {
-      right: -6px;
-    }
-
-    .right::after {
-      left: -6px;
-    }
-
-    /* MOBILE */
-    @media (max-width: 768px) {
-      .timeline::before {
-        left: 10px;
-      }
-
-      .item {
-        width: 100%;
-        padding-left: 40px;
-        text-align: left;
-      }
-
-      .left, .right {
-        left: 0;
-      }
-
-      .item::after {
-        left: 0;
-      }
-    }
-
-    /* SECTION BOX */
-    .box {
-      background: #151922;
-      padding: 16px;
-      border-radius: 10px;
-      border: 1px solid #222;
-      margin-top: 30px;
+    /* ICON BADGES */
+    .icon {
+      display: inline-block;
+      font-size: 14px;
+      margin-right: 6px;
     }
 
   </style>
@@ -187,7 +142,6 @@
 
 <body>
 
-<!-- NAV -->
 <div class="nav">
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
@@ -197,73 +151,136 @@
 
 <section>
 
-<!-- HERO -->
-<div class="hero">
-  <h1>About Me</h1>
-  <div class="subtitle">Supply Chain · Lifecycle Strategy · MedTech Systems</div>
-  <img src="your_photo.jpg" alt="Profile Photo">
-</div>
+<h1>My Journey</h1>
+<div class="subtitle">Leadership • Supply Chain • Global Transformation</div>
 
-<!-- STORY BLOCK -->
-<div class="box">
-I am a systems-driven supply chain professional specializing in lifecycle management, end-of-life (EOL) strategy, and global MedTech operations. I thrive in structured, high-impact environments where analytics, cross-functional decision-making, and operational execution intersect.
+<img src="pic.jpg" class="profile-pic">
+
+<div class="intro">
+A career shaped by discipline, performance, and transformation — evolving from sports and customer operations in India to global MedTech lifecycle leadership at Philips in the Netherlands.
 </div>
 
 <!-- TIMELINE -->
+
 <div class="timeline">
 
-  <div class="item left">
-    <div class="content">
-      <h3>Lifecycle Manager – Philips</h3>
-      <span>2024 – Present</span>
-      <p>
-        Leading EOL and obsolescence strategy for global MedTech hardware portfolio, improving forecast accuracy and reducing inventory exposure.
-      </p>
-    </div>
+  <div class="event">
+    <div class="dot"></div>
+    <div class="year">1986</div>
+    <div class="title"><span class="icon">🌱</span>Born</div>
+    <div class="desc">Born on 1st July 1986 — foundation of discipline and resilience.</div>
   </div>
 
-  <div class="item right">
-    <div class="content">
-      <h3>MBA – Maastricht University</h3>
-      <span>2023</span>
-      <p>
-        Specialized in Supply Chain Management with thesis on NOK handling process design at Philips IGT Systems.
-      </p>
-    </div>
+  <div class="event">
+    <div class="dot"></div>
+    <div class="year">2005</div>
+    <div class="title"><span class="icon">🏀</span>National Basketball Player</div>
+    <div class="desc">Represented India in National Basketball Championship — building leadership, teamwork, and competitive mindset.</div>
   </div>
 
-  <div class="item left">
-    <div class="content">
-      <h3>Corporate Gurukul</h3>
-      <span>2022 – 2023</span>
-      <p>
-        Managed procurement transformation across APAC & MEA regions and built analytics dashboards for spend visibility.
-      </p>
-    </div>
+  <div class="event">
+    <div class="dot"></div>
+    <div class="year">2009</div>
+    <div class="title"><span class="icon">🎓</span>B.Com Completed</div>
+    <div class="desc">Strong foundation in commerce and business fundamentals.</div>
   </div>
 
-  <div class="item right">
-    <div class="content">
-      <h3>Navjyoti India Foundation</h3>
-      <span>2019 – 2021</span>
-      <p>
-        Led logistics and supply chain operations with focus on service efficiency and compliance excellence.
-      </p>
-    </div>
+  <div class="event">
+    <div class="dot"></div>
+    <div class="year">2008–2014</div>
+    <div class="title"><span class="icon">🚗</span>Hyundai Motor India</div>
+    <div class="desc">Customer Relations Manager managing service operations and customer experience.</div>
   </div>
 
-</div>
+  <div class="event">
+    <div class="dot"></div>
+    <div class="year">2014–2018</div>
+    <div class="title"><span class="icon">🏢</span>Angel Quality Solutions</div>
+    <div class="desc">Manager Admin in US-based company handling operations and coordination.</div>
+  </div>
 
-<!-- PERSONALITY / FINAL BLOCK -->
-<div class="box">
-<b>What defines me:</b><br><br>
-✔ Structured thinking in complex systems<br>
-✔ Strong ownership in execution environments<br>
-✔ Analytical + operational hybrid mindset<br>
-✔ Passion for healthcare supply chain transformation<br>
+  <div class="event">
+    <div class="dot"></div>
+    <div class="year">2017</div>
+    <div class="title"><span class="icon">🎓</span>M.Com Completed</div>
+    <div class="desc">Advanced commerce and financial systems knowledge.</div>
+  </div>
+
+  <div class="event">
+    <div class="dot"></div>
+    <div class="year">2018–2021</div>
+    <div class="title"><span class="icon">👩‍⚖️</span>Navjyoti India Foundation</div>
+    <div class="desc">Deputy Manager under Hon’ble Dr. Kiran Bedi — governance, operations, and social impact leadership.</div>
+  </div>
+
+  <div class="event">
+    <div class="dot"></div>
+    <div class="year">2021–2022</div>
+    <div class="title"><span class="icon">💼</span>Techexpertz</div>
+    <div class="desc">Executive Assistant supporting leadership and operations.</div>
+  </div>
+
+  <div class="event">
+    <div class="dot"></div>
+    <div class="year">2022–2023</div>
+    <div class="title"><span class="icon">📊</span>Corporate Gurukul</div>
+    <div class="desc">Strategic Projects Lead managing procurement and analytics across APAC & MEA.</div>
+  </div>
+
+  <div class="event">
+    <div class="dot"></div>
+    <div class="year">2023</div>
+    <div class="title"><span class="icon">✈️</span>Move to Netherlands</div>
+    <div class="desc">Pursued MBA in Supply Chain Management for global exposure and diversity experience.</div>
+  </div>
+
+  <div class="event">
+    <div class="dot"></div>
+    <div class="year">Feb 2024</div>
+    <div class="title"><span class="icon">🏥</span>Philips Internship</div>
+    <div class="desc">Supply Chain Intern at Philips Healthcare, Eindhoven.</div>
+  </div>
+
+  <div class="event">
+    <div class="dot"></div>
+    <div class="year">Sep 2024</div>
+    <div class="title"><span class="icon">🎓</span>MBA Completed</div>
+    <div class="desc">Completed MBA in Supply Chain Management at Maastricht University.</div>
+  </div>
+
+  <div class="event">
+    <div class="dot"></div>
+    <div class="year">Feb 2025</div>
+    <div class="title"><span class="icon">⚙️</span>NOK Process Implementation</div>
+    <div class="desc">Philips adopted NOK handling process designed during internship.</div>
+  </div>
+
+  <div class="event">
+    <div class="dot"></div>
+    <div class="year">Oct 2024 – Present</div>
+    <div class="title"><span class="icon">🌍</span>Lifecycle Manager – Philips</div>
+    <div class="desc">Leading global EOL strategy, inventory optimization, and lifecycle governance.</div>
+  </div>
+
 </div>
 
 </section>
+
+<script>
+const items = document.querySelectorAll('.event');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.2 });
+
+items.forEach(item => {
+  observer.observe(item);
+});
+</script>
 
 </body>
 </html>

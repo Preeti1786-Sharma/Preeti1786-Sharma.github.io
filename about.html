@@ -3,32 +3,28 @@
 <head>
   <title>About | Preeti Sharma</title>
 
-  <!-- TYPOGRAPHY (CONSISTENT SYSTEM) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
-      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      font-family: "Inter", Arial, sans-serif;
       background: #0b0d10;
       color: #e6e6e6;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      letter-spacing: 0.2px;
-      line-height: 1.65;
+      line-height: 1.7;
     }
 
-    /* NAV (UNCHANGED STYLE, JUST POLISHED) */
+    /* NAV */
     .nav {
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(11, 13, 16, 0.85);
-      backdrop-filter: blur(10px);
+      background: rgba(11,13,16,0.85);
+      backdrop-filter: blur(12px);
       display: flex;
       justify-content: center;
       gap: 22px;
-      padding: 14px;
+      padding: 12px;
       border-bottom: 1px solid #1c1f26;
       z-index: 1000;
     }
@@ -37,117 +33,110 @@
       color: #9aa4b2;
       text-decoration: none;
       font-size: 13px;
-      font-weight: 500;
-      transition: 0.2s;
     }
 
-    .nav a:hover {
-      color: #ffffff;
-    }
+    .nav a:hover { color: #fff; }
 
     section {
-      max-width: 980px;
+      max-width: 950px;
       margin: auto;
       padding: 110px 20px 60px;
     }
 
     h1 {
       text-align: center;
-      font-size: 34px;
+      font-size: 36px;
       font-weight: 600;
-      margin-bottom: 8px;
-      letter-spacing: -0.4px;
-    }
-
-    .subtitle {
-      text-align: center;
-      color: #8b949e;
-      font-size: 14px;
-      margin-bottom: 25px;
-    }
-
-    .profile-pic {
-      width: 135px;
-      height: 135px;
-      border-radius: 50%;
-      object-fit: cover;
-      display: block;
-      margin: 20px auto;
-      border: 1px solid #2a2f3a;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      margin-bottom: 10px;
     }
 
     .intro {
-      background: #11151c;
-      border: 1px solid #1f2633;
-      border-radius: 12px;
-      padding: 16px;
-      font-size: 14px;
+      text-align: center;
       color: #cbd5e1;
-      line-height: 1.7;
-      margin-bottom: 40px;
+      max-width: 780px;
+      margin: auto;
+      font-size: 14px;
     }
 
-    /* TIMELINE (PRESERVED LAYOUT) */
+    /* TIMELINE */
     .timeline {
       position: relative;
-      margin-top: 30px;
+      margin-top: 50px;
     }
 
-    .timeline::before {
-      content: "";
+    .line {
       position: absolute;
-      left: 18px;
+      left: 50%;
       top: 0;
       bottom: 0;
       width: 1px;
-      background: #232836;
+      background: #1f2633;
     }
 
-    .event {
+    .item {
+      display: flex;
+      justify-content: space-between;
+      margin: 40px 0;
       position: relative;
-      padding-left: 55px;
-      margin-bottom: 28px;
-
-      opacity: 0;
-      transform: translateY(14px);
-      transition: all 0.5s ease;
     }
 
-    .event.show {
-      opacity: 1;
-      transform: translateY(0);
+    .box {
+      width: 45%;
+      background: #11151c;
+      border: 1px solid #1f2633;
+      padding: 16px;
+      border-radius: 12px;
+      transition: 0.3s;
     }
 
-    .dot {
-      position: absolute;
-      left: 11px;
-      top: 6px;
-      width: 12px;
-      height: 12px;
-      background: #4f7cff;
-      border-radius: 50%;
-      box-shadow: 0 0 10px rgba(79,124,255,0.35);
+    .box:hover {
+      transform: translateY(-3px);
+      border-color: #2a3550;
     }
+
+    .left { text-align: right; }
+    .right { text-align: left; }
 
     .year {
       font-size: 12px;
       color: #7d8590;
-      margin-bottom: 3px;
-      letter-spacing: 0.3px;
+      margin-bottom: 6px;
     }
 
     .title {
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 600;
-      color: #e6e6e6;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
+      color: #fff;
     }
 
     .desc {
       font-size: 13px;
-      color: #aab4c0;
-      line-height: 1.6;
+      color: #cbd5e1;
+    }
+
+    /* CENTER DOT */
+    .dot {
+      width: 10px;
+      height: 10px;
+      background: #4f7cff;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 20px;
+    }
+
+    /* REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: all 0.6s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
     }
 
   </style>
@@ -155,7 +144,6 @@
 
 <body>
 
-<!-- NAV -->
 <div class="nav">
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
@@ -165,94 +153,92 @@
 
 <section>
 
-<h1>My Journey</h1>
-<div class="subtitle">Leadership • Supply Chain • Global Transformation</div>
+<h1 class="reveal">About Me</h1>
 
-<img src="pic.jpg" class="profile-pic" alt="Preeti Sharma">
-
-<div class="intro">
-A structured career evolving from sports leadership and customer operations in India to global MedTech lifecycle strategy at Philips Healthcare in the Netherlands.
-</div>
+<p class="intro reveal">
+A Supply Chain & Lifecycle Management professional with a global journey spanning India and the Netherlands, focused on building scalable, compliant, and data-driven MedTech operations.
+</p>
 
 <!-- TIMELINE -->
-
 <div class="timeline">
 
-  <div class="event">
+  <div class="line"></div>
+
+  <!-- 1986 -->
+  <div class="item reveal">
+    <div class="box left">
+      <div class="year">1986</div>
+      <div class="title">Born in Delhi, India</div>
+      <div class="desc">Early foundation shaped in a fast-paced metropolitan environment.</div>
+    </div>
     <div class="dot"></div>
-    <div class="year">1986</div>
-    <div class="title">Early Foundations</div>
-    <div class="desc">Born on 1st July 1986 — building discipline and resilience.</div>
+    <div class="box right"></div>
   </div>
 
-  <div class="event">
+  <!-- SPORTS -->
+  <div class="item reveal">
+    <div class="box left"></div>
     <div class="dot"></div>
-    <div class="year">2005</div>
-    <div class="title">National Basketball Representation</div>
-    <div class="desc">Represented India in national championship, developing leadership and competitive mindset.</div>
+    <div class="box right">
+      <div class="year">2005</div>
+      <div class="title">National Basketball Athlete</div>
+      <div class="desc">Represented India at national championship level, building discipline and teamwork mindset.</div>
+    </div>
   </div>
 
-  <div class="event">
+  <!-- EDUCATION -->
+  <div class="item reveal">
+    <div class="box left">
+      <div class="year">2009</div>
+      <div class="title">B.Com Graduation</div>
+      <div class="desc">Built foundation in commerce, finance, and business systems.</div>
+    </div>
     <div class="dot"></div>
-    <div class="year">2008–2014</div>
-    <div class="title">Hyundai Motor India</div>
-    <div class="desc">Customer Relations Manager handling service operations and customer lifecycle experience.</div>
+    <div class="box right"></div>
   </div>
 
-  <div class="event">
+  <!-- HYUNDAI -->
+  <div class="item reveal">
+    <div class="box left"></div>
     <div class="dot"></div>
-    <div class="year">2014–2018</div>
-    <div class="title">Angel Quality Solutions</div>
-    <div class="desc">Managed administration and operations in US-based organization.</div>
+    <div class="box right">
+      <div class="year">2008–2014</div>
+      <div class="title">Hyundai Motor India</div>
+      <div class="desc">Customer Relations Manager – developed large-scale operational and stakeholder experience.</div>
+    </div>
   </div>
 
-  <div class="event">
+  <!-- NAVJYOTI -->
+  <div class="item reveal">
+    <div class="box left">
+      <div class="year">2018–2021</div>
+      <div class="title">Navjyoti India Foundation</div>
+      <div class="desc">Deputy Manager under leadership of Hon’ble Dr. Kiran Bedi. Managed operations and logistics.</div>
+    </div>
     <div class="dot"></div>
-    <div class="year">2018–2021</div>
-    <div class="title">Navjyoti India Foundation</div>
-    <div class="desc">Deputy Manager under Hon’ble Dr. Kiran Bedi leading governance and operations.</div>
+    <div class="box right"></div>
   </div>
 
-  <div class="event">
+  <!-- EUROPE -->
+  <div class="item reveal">
+    <div class="box left"></div>
     <div class="dot"></div>
-    <div class="year">2022–2023</div>
-    <div class="title">Corporate Gurukul</div>
-    <div class="desc">Strategic Projects Lead driving procurement optimization and analytics.</div>
+    <div class="box right">
+      <div class="year">2023</div>
+      <div class="title">Moved to Netherlands</div>
+      <div class="desc">Pursued MBA in Supply Chain Management for global exposure.</div>
+    </div>
   </div>
 
-  <div class="event">
+  <!-- PHILIPS -->
+  <div class="item reveal">
+    <div class="box left">
+      <div class="year">2024–Present</div>
+      <div class="title">Philips Medical Systems</div>
+      <div class="desc">Lifecycle Manager – leading EOL strategy, inventory optimization, and global governance.</div>
+    </div>
     <div class="dot"></div>
-    <div class="year">2023</div>
-    <div class="title">Netherlands – MBA</div>
-    <div class="desc">Moved for MBA in Supply Chain Management to gain global exposure.</div>
-  </div>
-
-  <div class="event">
-    <div class="dot"></div>
-    <div class="year">Feb 2024</div>
-    <div class="title">Philips Internship</div>
-    <div class="desc">Supply Chain Intern contributing to lifecycle transformation initiatives.</div>
-  </div>
-
-  <div class="event">
-    <div class="dot"></div>
-    <div class="year">Sep 2024</div>
-    <div class="title">MBA Completion</div>
-    <div class="desc">Completed MBA in Supply Chain Management at Maastricht University.</div>
-  </div>
-
-  <div class="event">
-    <div class="dot"></div>
-    <div class="year">Feb 2025</div>
-    <div class="title">NOK Process Implementation</div>
-    <div class="desc">Philips adopted NOK handling process designed during internship.</div>
-  </div>
-
-  <div class="event">
-    <div class="dot"></div>
-    <div class="year">Present</div>
-    <div class="title">Lifecycle Manager – Philips</div>
-    <div class="desc">Leading global EOL strategy and lifecycle governance for MedTech portfolio.</div>
+    <div class="box right"></div>
   </div>
 
 </div>
@@ -260,7 +246,7 @@ A structured career evolving from sports leadership and customer operations in I
 </section>
 
 <script>
-const items = document.querySelectorAll('.event');
+const items = document.querySelectorAll('.reveal');
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -270,7 +256,7 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.15 });
 
-items.forEach(item => observer.observe(item));
+items.forEach(el => observer.observe(el));
 </script>
 
 </body>

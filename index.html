@@ -3,17 +3,15 @@
 <head>
   <title>Preeti Sharma | Lifecycle Manager</title>
 
-  <!-- ELITE FONT (same as About) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
-      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      font-family: "Inter", Arial, sans-serif;
       background: #0b0d10;
       color: #e6e6e6;
       -webkit-font-smoothing: antialiased;
-      letter-spacing: 0.2px;
       line-height: 1.65;
     }
 
@@ -23,7 +21,7 @@
       top: 0;
       width: 100%;
       background: rgba(11,13,16,0.85);
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
       display: flex;
       justify-content: center;
       gap: 22px;
@@ -47,33 +45,34 @@
       padding: 120px 20px 60px;
     }
 
+    /* HERO */
     h1 {
-      font-size: 36px;
+      font-size: 38px;
       font-weight: 600;
       text-align: center;
+      letter-spacing: -0.6px;
       margin-bottom: 8px;
-      letter-spacing: -0.5px;
     }
 
     .subtitle {
       text-align: center;
       color: #8b949e;
       font-size: 14px;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
-    p {
+    .intro {
       text-align: center;
-      color: #cbd5e1;
-      font-size: 14px;
       max-width: 780px;
       margin: auto;
+      font-size: 14px;
+      color: #cbd5e1;
     }
 
     /* BUTTONS */
     .btns {
       text-align: center;
-      margin-top: 20px;
+      margin-top: 18px;
     }
 
     .btn {
@@ -95,18 +94,19 @@
     }
 
     /* SECTIONS */
-    h2 {
-      margin-top: 60px;
+    .section-title {
+      margin-top: 55px;
       font-size: 18px;
       font-weight: 600;
-      color: #fff;
+      color: #ffffff;
     }
 
+    /* GRID */
     .grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-top: 20px;
+      gap: 14px;
+      margin-top: 18px;
     }
 
     .card {
@@ -114,6 +114,8 @@
       border: 1px solid #1f2633;
       border-radius: 12px;
       padding: 14px;
+      font-size: 13px;
+      color: #cbd5e1;
       transition: 0.25s;
     }
 
@@ -122,18 +124,41 @@
       border-color: #2a3550;
     }
 
-    .tag {
-      font-size: 12px;
-      color: #9aa4b2;
+    /* KPI */
+    .kpi {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 18px;
     }
 
-    /* EXPERIENCE FULL WIDTH FEEL */
-    .exp {
-      margin-top: 18px;
-      padding: 14px;
-      background: #11151c;
+    .kpi div {
+      background: linear-gradient(180deg, #11151c, #0f131b);
       border: 1px solid #1f2633;
       border-radius: 12px;
+      padding: 16px;
+      font-size: 13px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .kpi strong {
+      font-size: 20px;
+      color: #ffffff;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    /* SCROLL ANIMATION */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: all 0.6s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
     }
 
   </style>
@@ -150,53 +175,69 @@
 
 <section>
 
-<h1>Preeti Sharma</h1>
-<div class="subtitle">Lifecycle Manager | Philips Medical Systems Nederland B.V.</div>
+<!-- HERO -->
+<h1 class="reveal">Preeti Sharma</h1>
+<div class="subtitle reveal">Lifecycle Manager | Philips Medical Systems Nederland B.V.</div>
 
-<p>
-Supply Chain & Lifecycle Management professional with 6+ years of international experience across MedTech and high-tech environments, currently driving end-of-life (EOL) and obsolescence strategy at Philips.
+<p class="intro reveal">
+Supply Chain & Lifecycle Management professional with 6+ years of international experience across MedTech and high-tech environments, specializing in end-of-life (EOL) strategy, inventory optimization, and global supply chain transformation.
 </p>
 
-<div class="btns">
+<div class="btns reveal">
   <a class="btn" href="resume.html">View Resume</a>
-  <a class="btn" href="resume.pdf" target="_blank">Download Resume</a>
   <a class="btn" href="projects.html">Case Studies</a>
-  <a class="btn" href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+  <a class="btn" href="about.html">About Me</a>
 </div>
 
-<!-- CORE COMPETENCIES -->
-<h2>Core Competencies</h2>
-<div class="grid">
+<!-- WHAT I DRIVE -->
+<div class="section-title reveal">What I Drive</div>
 
+<div class="grid reveal">
   <div class="card">EOL & Obsolescence Strategy</div>
   <div class="card">S&OP & Demand Planning</div>
-  <div class="card">SAP (MM/WM) & Power BI</div>
-  <div class="card">Inventory & Working Capital Optimisation</div>
+  <div class="card">SAP (MM/WM) Execution</div>
+  <div class="card">Inventory Optimization</div>
   <div class="card">Regulatory Compliance (GMP/GDP/QMS)</div>
-  <div class="card">Lean / CAPA / Process Improvement</div>
-
+  <div class="card">Cross-functional Governance</div>
 </div>
 
-<!-- EXPERIENCE -->
-<h2>Professional Experience</h2>
+<!-- KPI -->
+<div class="section-title reveal">Impact at a Glance</div>
 
-<div class="exp">Lifecycle Manager – Philips (Present)</div>
-<div class="exp">Supply Chain Intern – Philips</div>
-<div class="exp">Corporate Gurukul – Strategic Projects Lead</div>
-<div class="exp">Navjyoti India Foundation – Deputy Manager</div>
+<div class="kpi reveal">
+  <div><strong>78%</strong>Forecast Accuracy Improvement</div>
+  <div><strong>20%</strong>Inventory Reduction</div>
+  <div><strong>20 days</strong>Decision Cycle Time</div>
+  <div><strong>96%</strong>NOK Disruption Reduction</div>
+</div>
 
 <!-- CERTIFICATIONS -->
-<h2>Certifications</h2>
-<div class="grid">
+<div class="section-title reveal">Certifications</div>
 
+<div class="grid reveal">
   <div class="card">Lean Six Sigma Green Belt</div>
   <div class="card">Certified ScrumMaster</div>
-  <div class="card">Power BI</div>
-  <div class="card">Supply Chain Management</div>
-
+  <div class="card">Power BI Dashboarding</div>
+  <div class="card">SAP (MM / WM)</div>
+  <div class="card">Advanced Excel Modeling</div>
+  <div class="card">Supply Chain Management (MBA)</div>
 </div>
 
 </section>
+
+<script>
+const items = document.querySelectorAll('.reveal');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.15 });
+
+items.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>

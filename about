@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>About Me | Preeti Sharma</title>
+  <title>About | Preeti Sharma</title>
 
   <style>
     body {
@@ -11,61 +11,175 @@
       color: #e6e6e6;
     }
 
+    /* NAV */
     .nav {
       position: fixed;
+      top: 0;
       width: 100%;
       background: #0f1115;
       display: flex;
       justify-content: center;
       gap: 20px;
-      padding: 10px;
+      padding: 12px;
       border-bottom: 1px solid #222;
+      z-index: 1000;
     }
 
     .nav a {
       color: #aaa;
       text-decoration: none;
-      font-size: 13px;
+      font-size: 14px;
+      font-weight: 600;
     }
+
+    .nav a:hover { color: #fff; }
 
     section {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
-      padding: 80px 20px;
+      padding: 90px 20px 40px;
     }
 
-    h1 { font-size: 36px; }
+    h1 {
+      font-size: 36px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
 
+    .subtitle {
+      text-align: center;
+      color: #aaa;
+      margin-bottom: 40px;
+    }
+
+    /* HERO */
     .hero {
       text-align: center;
+      margin-bottom: 50px;
     }
 
     .hero img {
-      width: 160px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
-      margin-top: 20px;
+      border: 2px solid #333;
+      margin-top: 10px;
     }
 
+    /* TIMELINE */
     .timeline {
-      border-left: 2px solid #333;
-      padding-left: 20px;
-      margin-top: 30px;
+      position: relative;
+      margin-top: 40px;
     }
 
-    .event {
-      margin-bottom: 20px;
+    .timeline::before {
+      content: '';
+      position: absolute;
+      width: 2px;
+      background: #333;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
-    .year {
+    .item {
+      padding: 20px;
+      position: relative;
+      width: 50%;
+    }
+
+    .item .content {
+      background: #151922;
+      padding: 16px;
+      border-radius: 10px;
+      border: 1px solid #222;
+    }
+
+    .item h3 {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .item span {
       color: #7aa2ff;
-      font-weight: bold;
+      font-size: 13px;
     }
 
+    .item p {
+      font-size: 13px;
+      color: #ccc;
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+
+    /* LEFT */
+    .left {
+      left: 0;
+      text-align: right;
+    }
+
+    .left .content {
+      margin-right: 20px;
+    }
+
+    /* RIGHT */
+    .right {
+      left: 50%;
+    }
+
+    .right .content {
+      margin-left: 20px;
+    }
+
+    /* DOT */
+    .item::after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #7aa2ff;
+      border-radius: 50%;
+      top: 25px;
+      z-index: 1;
+    }
+
+    .left::after {
+      right: -6px;
+    }
+
+    .right::after {
+      left: -6px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .timeline::before {
+        left: 10px;
+      }
+
+      .item {
+        width: 100%;
+        padding-left: 40px;
+        text-align: left;
+      }
+
+      .left, .right {
+        left: 0;
+      }
+
+      .item::after {
+        left: 0;
+      }
+    }
+
+    /* SECTION BOX */
     .box {
       background: #151922;
-      padding: 14px;
+      padding: 16px;
       border-radius: 10px;
-      margin-top: 15px;
+      border: 1px solid #222;
+      margin-top: 30px;
     }
 
   </style>
@@ -73,53 +187,80 @@
 
 <body>
 
+<!-- NAV -->
 <div class="nav">
   <a href="index.html">Home</a>
+  <a href="about.html">About</a>
   <a href="projects.html">Case Studies</a>
   <a href="resume.html">Resume</a>
 </div>
 
 <section>
 
+<!-- HERO -->
 <div class="hero">
-<h1>About Me</h1>
-<img src="your_photo.jpg">
+  <h1>About Me</h1>
+  <div class="subtitle">Supply Chain · Lifecycle Strategy · MedTech Systems</div>
+  <img src="your_photo.jpg" alt="Profile Photo">
 </div>
 
+<!-- STORY BLOCK -->
 <div class="box">
-Driven by systems thinking, I approach supply chain and lifecycle management as interconnected ecosystems...
+I am a systems-driven supply chain professional specializing in lifecycle management, end-of-life (EOL) strategy, and global MedTech operations. I thrive in structured, high-impact environments where analytics, cross-functional decision-making, and operational execution intersect.
 </div>
 
-<h2>Journey</h2>
-
+<!-- TIMELINE -->
 <div class="timeline">
 
-<div class="event">
-<div class="year">2024–Present</div>
-Lifecycle Manager – Philips
+  <div class="item left">
+    <div class="content">
+      <h3>Lifecycle Manager – Philips</h3>
+      <span>2024 – Present</span>
+      <p>
+        Leading EOL and obsolescence strategy for global MedTech hardware portfolio, improving forecast accuracy and reducing inventory exposure.
+      </p>
+    </div>
+  </div>
+
+  <div class="item right">
+    <div class="content">
+      <h3>MBA – Maastricht University</h3>
+      <span>2023</span>
+      <p>
+        Specialized in Supply Chain Management with thesis on NOK handling process design at Philips IGT Systems.
+      </p>
+    </div>
+  </div>
+
+  <div class="item left">
+    <div class="content">
+      <h3>Corporate Gurukul</h3>
+      <span>2022 – 2023</span>
+      <p>
+        Managed procurement transformation across APAC & MEA regions and built analytics dashboards for spend visibility.
+      </p>
+    </div>
+  </div>
+
+  <div class="item right">
+    <div class="content">
+      <h3>Navjyoti India Foundation</h3>
+      <span>2019 – 2021</span>
+      <p>
+        Led logistics and supply chain operations with focus on service efficiency and compliance excellence.
+      </p>
+    </div>
+  </div>
+
 </div>
 
-<div class="event">
-<div class="year">2023</div>
-MBA – Maastricht University
-</div>
-
-<div class="event">
-<div class="year">2019–2021</div>
-Navjyoti India Foundation
-</div>
-
-</div>
-
-<h2>Achievements</h2>
+<!-- PERSONALITY / FINAL BLOCK -->
 <div class="box">
-• Improved forecast accuracy to 78%  
-• Reduced inventory by 20%  
-</div>
-
-<h2>Interests</h2>
-<div class="box">
-Basketball (former national player), analytics, travel
+<b>What defines me:</b><br><br>
+✔ Structured thinking in complex systems<br>
+✔ Strong ownership in execution environments<br>
+✔ Analytical + operational hybrid mindset<br>
+✔ Passion for healthcare supply chain transformation<br>
 </div>
 
 </section>

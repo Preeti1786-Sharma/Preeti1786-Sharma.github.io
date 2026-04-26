@@ -4,18 +4,17 @@
   <title>Preeti Sharma | Lifecycle Manager</title>
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       color: #1f1f1f;
-      background: #ffffff;
+      background: #fff;
+      line-height: 1.5;
     }
 
-    /* NAVIGATION */
+    /* NAV */
     .nav {
       position: fixed;
       top: 0;
@@ -24,7 +23,7 @@
       display: flex;
       justify-content: center;
       gap: 25px;
-      padding: 15px;
+      padding: 12px;
       border-bottom: 1px solid #eee;
       z-index: 1000;
     }
@@ -33,127 +32,70 @@
       text-decoration: none;
       color: #111;
       font-weight: bold;
-      font-size: 14px;
+      font-size: 13px;
     }
 
-    .nav a:hover {
-      color: #666;
-    }
-
-    /* SECTIONS */
     section {
-      max-width: 1000px;
+      max-width: 950px;
       margin: auto;
-      padding: 70px 20px;
+      padding: 40px 20px;   /* 🔥 reduced spacing = NO GAPS */
     }
 
-    h1 {
-      font-size: 46px;
-      margin-bottom: 10px;
-    }
+    h1 { font-size: 44px; margin: 0; }
 
     h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
       border-bottom: 1px solid #eee;
-      padding-bottom: 6px;
-      margin-bottom: 20px;
+      padding-bottom: 5px;
     }
 
-    .subtitle {
-      color: #555;
-      font-size: 16px;
-    }
+    .subtitle { color: #555; margin-top: 5px; }
 
     .btn {
       display: inline-block;
-      padding: 10px 14px;
-      margin: 10px 10px 10px 0;
+      padding: 9px 14px;
+      margin: 10px 8px 0 0;
       background: #111;
-      color: white;
+      color: #fff;
       text-decoration: none;
       border-radius: 6px;
+      font-size: 13px;
+    }
+
+    .box {
+      background: #f7f7f7;
+      padding: 12px;
+      border-radius: 8px;
+      margin-top: 10px;
       font-size: 14px;
     }
 
-    .btn:hover {
-      opacity: 0.85;
-    }
-
-    /* KPI BOX */
-    .kpi {
-      background: #f7f7f7;
-      padding: 15px;
-      border-radius: 10px;
-      margin-top: 15px;
-      line-height: 1.6;
-    }
-
-    /* CERTIFICATIONS */
-    .cert-grid {
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-    }
-
-    .cert-card {
-      border: 1px solid #eee;
-      border-radius: 10px;
-      padding: 10px;
-      text-align: center;
-      transition: 0.3s;
-    }
-
-    .cert-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    }
-
-    .cert-card img {
-      width: 100%;
-      border-radius: 8px;
-    }
-
-    /* TIMELINE */
-    .timeline {
-      display: grid;
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 10px;
     }
 
     .card {
       border: 1px solid #eee;
-      padding: 20px;
-      border-radius: 12px;
-      transition: 0.3s;
+      padding: 12px;
+      border-radius: 10px;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    }
-
-    .icon {
-      font-size: 22px;
-      margin-bottom: 10px;
+    .role-title {
+      font-weight: bold;
+      margin-bottom: 3px;
     }
 
     .company {
-      font-weight: bold;
-    }
-
-    .year {
-      color: #777;
       font-size: 13px;
+      color: #444;
     }
 
-    /* DASHBOARD */
-    .dash {
-      width: 100%;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .dash:hover {
-      transform: scale(1.02);
+    .period {
+      font-size: 12px;
+      color: #777;
     }
 
   </style>
@@ -164,82 +106,88 @@
 <!-- NAV -->
 <div class="nav">
   <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#timeline">Experience</a>
+  <a href="#skills">Skills</a>
+  <a href="#exp">Experience</a>
+  <a href="#edu">Education</a>
   <a href="#cert">Certifications</a>
-  <a href="#dash">Dashboard</a>
-  <a href="projects.html">Projects</a>
-  <a href="resume.html">Resume</a>
 </div>
 
 <!-- HOME -->
 <section id="home">
 
   <h1>Preeti Sharma</h1>
-
   <div class="subtitle">
     Lifecycle Manager | MedTech Supply Chain | Philips Azurion Portfolio
   </div>
 
   <p>
-    Supply Chain & Lifecycle professional supporting
-    <strong>Philips Azurion image-guided therapy systems</strong>,
-    driving end-of-life strategy, inventory optimisation, and financial risk management across global MedTech operations.
+    Supply Chain & Lifecycle professional specializing in EOL strategy,
+    inventory optimisation, and working capital management in regulated MedTech environments.
   </p>
 
-  <div class="kpi">
-    <strong>Impact Highlights</strong><br>
-    ✔ 20% reduction in excess inventory<br>
-    ✔ 96% reduction in supply disruptions<br>
-    ✔ Forecast accuracy improvement (MAPE ~62% → ~78%)<br>
-    ✔ Decision cycle time reduced from 2 months → 20 days
-  </div>
-
   <a class="btn" href="resume.html">View Resume</a>
-  <a class="btn" href="resume.pdf" download>Download Resume</a>
   <a class="btn" href="projects.html">Case Studies</a>
 
 </section>
 
-<!-- ABOUT -->
-<section id="about">
+<!-- CORE COMPETENCIES -->
+<section id="skills">
 
-  <h2>Capability Snapshot</h2>
+  <h2>Core Competencies</h2>
 
-  <p><strong>Supply Chain:</strong> EOL Strategy · Inventory Governance · Lifecycle Management</p>
-  <p><strong>Analytics:</strong> SAP · Power BI · Forecast Modelling</p>
-  <p><strong>Execution:</strong> S&OP · Working Capital · CAPA</p>
+  <div class="box">
+    EOL & Obsolescence Strategy · S&OP & Demand Planning · SAP (MM/WM) & Power BI · Inventory & Working Capital Optimisation · Regulatory Compliance (GMP/GDP/QMS) · Vendor Negotiation & Procurement · Cross-functional Stakeholder Management · Process Improvement (Lean / CAPA) · Advanced Excel & Scenario Modelling
+  </div>
 
 </section>
 
 <!-- EXPERIENCE -->
-<section id="timeline">
+<section id="exp">
 
-  <h2>Career Journey</h2>
+  <h2>Professional Experience</h2>
 
-  <div class="timeline">
+  <div class="grid">
 
     <div class="card">
-      <div class="icon">🏥</div>
+      <div class="role-title">Lifecycle Manager</div>
       <div class="company">Philips Medical Systems Nederland B.V.</div>
-      <div class="year">2024 – Present</div>
-      <p>Lifecycle Manager – EOL strategy, SAP-driven planning, inventory optimisation, Power BI analytics.</p>
+      <div class="period">Oct 2024 – Present</div>
+      <p>Own EOL strategy, improved forecast accuracy (62% → 78%), reduced inventory by 20%, cut decision cycle time by 2 months → 20 days.</p>
     </div>
 
     <div class="card">
-      <div class="icon">📊</div>
+      <div class="role-title">Supply Chain Intern</div>
       <div class="company">Philips</div>
-      <div class="year">2024</div>
-      <p>Supply Chain Intern – Designed NOK process improving operational stability by 96%.</p>
+      <div class="period">Feb 2024 – Sep 2024</div>
+      <p>Designed NOK process reducing disruptions by 96%. Selected for full-time role.</p>
     </div>
 
     <div class="card">
-      <div class="icon">🌏</div>
+      <div class="role-title">Executive Associate</div>
       <div class="company">Corporate Gurukul</div>
-      <div class="year">2022 – 2023</div>
-      <p>Strategic Projects Lead – Procurement optimisation and analytics across APAC & MEA.</p>
+      <div class="period">2022 – 2023</div>
+      <p>Managed APAC & MEA procurement. Delivered 10–15% cost savings on €2M spend.</p>
     </div>
 
+    <div class="card">
+      <div class="role-title">Deputy Manager</div>
+      <div class="company">Navjyoti India Foundation</div>
+      <div class="period">2019 – 2021</div>
+      <p>Managed logistics operations, improved efficiency, ensured zero audit non-conformances.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- EDUCATION -->
+<section id="edu">
+
+  <h2>Education</h2>
+
+  <div class="box">
+    MBA – Supply Chain Management | Maastricht University<br>
+    Thesis: Design of the NOK Handling Processes at Philips IGT
   </div>
 
 </section>
@@ -247,52 +195,23 @@
 <!-- CERTIFICATIONS -->
 <section id="cert">
 
-  <h2>Certifications</h2>
+  <h2>Certifications & Skills</h2>
 
-  <div class="cert-grid">
-
-    <div class="cert-card">
-      <img src="scm.jpg">
-      <p>Supply Chain Management</p>
-    </div>
-
-    <div class="cert-card">
-      <img src="scrum.jpg">
-      <p>Scrum Master</p>
-    </div>
-
-    <div class="cert-card">
-      <img src="powerbi.jpg">
-      <p>Power BI</p>
-    </div>
-
-    <div class="cert-card">
-      <img src="lssgb.jpg">
-      <p>Lean Six Sigma</p>
-    </div>
-
+  <div class="box">
+    Certified ScrumMaster · Lean Six Sigma Green Belt · SAP (MM, WM) · Power BI · Advanced Excel · Tableau
   </div>
 
 </section>
 
-<!-- DASHBOARD -->
-<section id="dash">
+<!-- LANGUAGES -->
+<section>
 
-  <h2>Power BI Dashboard</h2>
+  <h2>Languages & Interests</h2>
 
-  <p>
-    Supply chain analytics dashboard for lifecycle visibility and inventory optimisation.
-  </p>
-
-  <img src="powerbi_dashboard.jpg" class="dash">
-
-  <br><br>
-
-  <a class="btn"
-     target="_blank"
-     href="https://app.powerbi.com/groups/me/reports/cdd446c0-37de-4d6c-90c0-41f91f561b6a/9053f4539ee8c7009095?experience=power-bi">
-     Open Dashboard
-  </a>
+  <div class="box">
+    English · Dutch · Hindi <br><br>
+    Former Indian National Basketball Player
+  </div>
 
 </section>
 

@@ -1,122 +1,302 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Projects | Preeti Sharma</title>
+  <title>Case Studies | Preeti Sharma</title>
 
   <style>
+    html { scroll-behavior: smooth; }
+
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      max-width: 1000px;
-      margin: 50px auto;
-      line-height: 1.7;
-      color: #1f1f1f;
+      background: #0f1115;
+      color: #e6e6e6;
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    .nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(15,17,21,0.95);
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 12px;
+      border-bottom: 1px solid #222;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav a {
+      color: #ddd;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .nav a:hover { color: #fff; }
+
+    section {
+      max-width: 950px;
+      margin: auto;
+      padding: 90px 20px;
     }
 
     h1 {
-      font-size: 38px;
+      font-size: 40px;
+      margin-bottom: 5px;
     }
 
     h2 {
-      border-bottom: 1px solid #ddd;
+      font-size: 18px;
+      border-bottom: 1px solid #333;
       padding-bottom: 6px;
       margin-top: 40px;
     }
 
+    .subtitle { color: #aaa; margin-bottom: 20px; }
+
+    /* CARD */
     .card {
-      border: 1px solid #eee;
-      padding: 18px;
-      border-radius: 10px;
+      background: #151922;
+      border: 1px solid #222;
+      padding: 16px;
+      border-radius: 12px;
       margin-top: 20px;
-      background: #fff;
+      transition: 0.4s;
+      opacity: 0;
+      transform: translateY(20px);
     }
 
-    img {
-      width: 100%;
-      border-radius: 10px;
-      margin-top: 10px;
+    .card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
     }
 
     a {
-      color: #0b57d0;
+      color: #7aa2ff;
       text-decoration: none;
       font-weight: bold;
     }
 
-    a:hover {
-      text-decoration: underline;
+    ul { margin-top: 10px; }
+
+    /* KPI */
+    .kpi {
+      background: #111827;
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 10px;
+      font-size: 12px;
+      color: #cbd5e1;
     }
+
+    /* COUNTERS */
+    .counter {
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    /* IMAGE */
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    /* MODAL */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+    }
+
+    .modal img {
+      max-width: 85%;
+      max-height: 85%;
+      border-radius: 10px;
+    }
+
   </style>
 </head>
 
 <body>
 
-<h1>Case Studies & Projects</h1>
+<!-- NAV -->
+<div class="nav">
+  <a href="index.html">Home</a>
+  <a href="projects.html">Case Studies</a>
+  <a href="resume.html">Resume</a>
+</div>
+
+<section>
+
+<h1>Case Studies</h1>
+<div class="subtitle">
+  Supply Chain & Lifecycle Management | Philips Azurion Portfolio
+</div>
 
 <p>
-Portfolio of lifecycle management, supply chain transformation, and analytics work.
+Consulting-style breakdown of lifecycle transformation, MedTech supply chain optimization, and analytics capability.
 </p>
 
-<!-- ===================== PROJECT 1 ===================== -->
+<!-- ===================== CASE 1 ===================== -->
 <div class="card">
 
-  <h2>End-of-Life Strategy Transformation (MedTech Portfolio)</h2>
+  <h2>Problem: EOL Complexity in Global MedTech Portfolio</h2>
 
   <p>
-    Owned lifecycle analytics and EOL governance for global MedTech hardware portfolio at
-    <a href="https://www.philips.nl/healthcare/e/image-guided-therapy" target="_blank">Philips</a>.
+    Fragmented lifecycle visibility across installed base leading to inefficient EOL decisions.
   </p>
 
+  <h2>Action</h2>
   <ul>
-    <li>Improved forecast accuracy (MAPE 62% → 78%)</li>
-    <li>Reduced excess & obsolete inventory by 20%</li>
-    <li>Reduced decision cycle time from 2 months to 20 days</li>
+    <li>Built lifecycle forecasting model using installed base + failure rates</li>
+    <li>Introduced structured EOL governance framework</li>
   </ul>
+
+  <h2>Impact</h2>
+
+  <div class="kpi">
+    Forecast Accuracy: <span class="counter" data-target="78">0</span>% (from 62%)<br>
+    Inventory Reduction: <span class="counter" data-target="20">0</span>%<br>
+    Decision Cycle Reduction: <span class="counter" data-target="20">0</span> days (from 60)
+  </div>
 
 </div>
 
-<!-- ===================== PROJECT 2 (YOUR NOK CASE) ===================== -->
+<!-- ===================== CASE 2 ===================== -->
 <div class="card">
 
-  <h2>Supply Chain Process Transformation – NOK Handling (QMS)</h2>
+  <h2>Problem: Supply Chain Disruptions (NOK Handling)</h2>
 
-  <p>
-    Designed and implemented a standardized NOK handling process within QMS for complex MedTech supply chains at
-    <a href="https://www.philips.nl/healthcare/e/image-guided-therapy" target="_blank">Philips Medical Systems Nederland B.V.</a>
-  </p>
-
+  <h2>Action</h2>
   <ul>
-    <li>Reduced material disruptions by 96%</li>
-    <li>Enabled cross-functional adoption across supply chain teams</li>
-    <li>Recognized by Supply Chain leadership (ISC IGT Systems)</li>
-    <li>Selected for full-time role based on performance impact</li>
+    <li>Designed QMS-based NOK handling process</li>
+    <li>Standardized cross-functional workflows</li>
   </ul>
 
-  <!-- IMAGE FROM PPT -->
-  <h3>Process Visualization (NOK Workflow)</h3>
+  <h2>Impact</h2>
 
-  <img src="nok_process.png" alt="NOK Process Slide">
+  <div class="kpi">
+    Disruption Reduction: <span class="counter" data-target="96">0</span>%<br>
+    Process Adoption: Global Supply Chain Teams
+  </div>
+
+  <img src="nok_process.png" onclick="openModal(this.src)">
+
+</div>
+
+<!-- ===================== CASE 3 ===================== -->
+<div class="card">
+
+  <h2>Problem: Lack of Spend Visibility</h2>
+
+  <h2>Action</h2>
+  <ul>
+    <li>Built Power BI dashboards for procurement analytics</li>
+    <li>Improved visibility across APAC & MEA sourcing</li>
+  </ul>
+
+  <h2>Impact</h2>
+
+  <div class="kpi">
+    Cost Savings: 10–15%<br>
+    Spend Managed: €2M+
+  </div>
+
+</div>
+
+<!-- ===================== CASE 4 (POWER BI) ===================== -->
+<div class="card">
+
+  <h2>Analytics Capability: Power BI Dashboard</h2>
 
   <p>
-    Standardized QMS-driven NOK handling workflow improving operational stability and compliance.
+    Sales & Profitability Insights dashboard demonstrating BI modeling and KPI analysis.
+  </p>
+
+  <div class="kpi">
+    Revenue Trends · Profitability · Regional KPIs · Category Performance
+  </div>
+
+  <img src="powerbi_dashboard.jpg" onclick="openModal(this.src)">
+
+  <p>
+    <a href="https://app.powerbi.com/groups/me/reports/cdd446c0-37de-4d6c-90c0-41f91f561b6a/9053f4539ee8c7009095?experience=power-bi"
+       target="_blank">
+       Open Interactive Dashboard
+    </a>
   </p>
 
 </div>
 
-<!-- ===================== PROJECT 3 ===================== -->
-<div class="card">
+</section>
 
-  <h2>Inventory & Working Capital Optimization</h2>
-
-  <p>
-    Built analytics models to optimize inventory and reduce working capital exposure.
-  </p>
-
-  <ul>
-    <li>Improved inventory visibility using SAP + Excel models</li>
-    <li>Enhanced forecasting accuracy across supply chain network</li>
-  </ul>
-
+<!-- MODAL -->
+<div class="modal" id="modal" onclick="closeModal()">
+  <img id="modalImg">
 </div>
+
+<script>
+function openModal(src) {
+  document.getElementById("modal").style.display = "flex";
+  document.getElementById("modalImg").src = src;
+}
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+
+/* SCROLL REVEAL */
+const cards = document.querySelectorAll('.card');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+});
+cards.forEach(card => observer.observe(card));
+
+/* KPI COUNTERS */
+const counters = document.querySelectorAll('.counter');
+
+counters.forEach(counter => {
+  counter.innerText = '0';
+
+  const update = () => {
+    const target = +counter.getAttribute('data-target');
+    const current = +counter.innerText;
+
+    const increment = target / 30;
+
+    if(current < target){
+      counter.innerText = Math.ceil(current + increment);
+      setTimeout(update, 30);
+    } else {
+      counter.innerText = target;
+    }
+  };
+
+  update();
+});
+</script>
 
 </body>
 </html>

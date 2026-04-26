@@ -12,15 +12,15 @@
       font-family: Arial, sans-serif;
       margin: 0;
       color: #1f1f1f;
-      background: #fff;
+      background: #ffffff;
     }
 
-    /* NAVBAR */
+    /* NAVIGATION */
     .nav {
       position: fixed;
       top: 0;
       width: 100%;
-      background: white;
+      background: #fff;
       display: flex;
       justify-content: center;
       gap: 25px;
@@ -44,7 +44,7 @@
     section {
       max-width: 1000px;
       margin: auto;
-      padding: 100px 20px;
+      padding: 70px 20px;
     }
 
     h1 {
@@ -78,20 +78,19 @@
       opacity: 0.85;
     }
 
-    /* CAPABILITY */
-    .tags span {
-      display: inline-block;
-      background: #f4f4f4;
-      padding: 6px 10px;
-      margin: 5px;
-      border-radius: 6px;
-      font-size: 13px;
+    /* KPI BOX */
+    .kpi {
+      background: #f7f7f7;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 15px;
+      line-height: 1.6;
     }
 
-    /* CERT GRID */
+    /* CERTIFICATIONS */
     .cert-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 20px;
     }
 
@@ -105,12 +104,44 @@
 
     .cert-card:hover {
       transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     }
 
     .cert-card img {
       width: 100%;
       border-radius: 8px;
-      cursor: pointer;
+    }
+
+    /* TIMELINE */
+    .timeline {
+      display: grid;
+      gap: 20px;
+    }
+
+    .card {
+      border: 1px solid #eee;
+      padding: 20px;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .icon {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .company {
+      font-weight: bold;
+    }
+
+    .year {
+      color: #777;
+      font-size: 13px;
     }
 
     /* DASHBOARD */
@@ -125,79 +156,6 @@
       transform: scale(1.02);
     }
 
-    /* TIMELINE CARDS */
-    .timeline {
-      display: grid;
-      gap: 20px;
-    }
-
-    .card {
-      border: 1px solid #eee;
-      padding: 20px;
-      border-radius: 12px;
-      transition: 0.3s;
-      background: #fff;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    }
-
-    .icon {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    .company {
-      font-weight: bold;
-      color: #333;
-    }
-
-    .year {
-      color: #777;
-      font-size: 13px;
-    }
-
-    /* SCROLL ANIMATION */
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: 0.8s;
-    }
-
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* MODAL */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.9);
-    }
-
-    .modal img {
-      display: block;
-      margin: auto;
-      max-width: 90%;
-      max-height: 90%;
-    }
-
-    .close {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      color: white;
-      font-size: 40px;
-      cursor: pointer;
-    }
   </style>
 </head>
 
@@ -215,23 +173,36 @@
 </div>
 
 <!-- HOME -->
-<section id="home" class="reveal active">
+<section id="home">
 
   <h1>Preeti Sharma</h1>
-  <div class="subtitle">Lifecycle Manager | Philips Medical Systems Nederland B.V.</div>
+
+  <div class="subtitle">
+    Lifecycle Manager | MedTech Supply Chain | Philips Azurion Portfolio
+  </div>
 
   <p>
-    Supply Chain & Lifecycle professional specializing in EOL strategy,
-    inventory optimisation, and financial risk management in MedTech environments.
+    Supply Chain & Lifecycle professional supporting
+    <strong>Philips Azurion image-guided therapy systems</strong>,
+    driving end-of-life strategy, inventory optimisation, and financial risk management across global MedTech operations.
   </p>
+
+  <div class="kpi">
+    <strong>Impact Highlights</strong><br>
+    ✔ 20% reduction in excess inventory<br>
+    ✔ 96% reduction in supply disruptions<br>
+    ✔ Forecast accuracy improvement (MAPE ~62% → ~78%)<br>
+    ✔ Decision cycle time reduced from 2 months → 20 days
+  </div>
 
   <a class="btn" href="resume.html">View Resume</a>
   <a class="btn" href="resume.pdf" download>Download Resume</a>
+  <a class="btn" href="projects.html">Case Studies</a>
 
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="reveal">
+<section id="about">
 
   <h2>Capability Snapshot</h2>
 
@@ -241,35 +212,32 @@
 
 </section>
 
-<!-- TIMELINE -->
-<section id="timeline" class="reveal">
+<!-- EXPERIENCE -->
+<section id="timeline">
 
   <h2>Career Journey</h2>
 
   <div class="timeline">
 
-    <div class="card reveal">
+    <div class="card">
       <div class="icon">🏥</div>
-      <h3>Lifecycle Manager</h3>
-      <p class="company">Philips Medical Systems Nederland B.V.</p>
-      <p class="year">2024 – Present</p>
-      <p>Leading EOL strategy, inventory optimisation, and lifecycle governance.</p>
+      <div class="company">Philips Medical Systems Nederland B.V.</div>
+      <div class="year">2024 – Present</div>
+      <p>Lifecycle Manager – EOL strategy, SAP-driven planning, inventory optimisation, Power BI analytics.</p>
     </div>
 
-    <div class="card reveal">
+    <div class="card">
       <div class="icon">📊</div>
-      <h3>Supply Chain Intern</h3>
-      <p class="company">Philips</p>
-      <p class="year">2024</p>
-      <p>Designed NOK process improving operational stability by 96%.</p>
+      <div class="company">Philips</div>
+      <div class="year">2024</div>
+      <p>Supply Chain Intern – Designed NOK process improving operational stability by 96%.</p>
     </div>
 
-    <div class="card reveal">
+    <div class="card">
       <div class="icon">🌏</div>
-      <h3>Strategic Projects Lead</h3>
-      <p class="company">Corporate Gurukul</p>
-      <p class="year">2022 – 2023</p>
-      <p>Procurement optimisation across APAC & MEA.</p>
+      <div class="company">Corporate Gurukul</div>
+      <div class="year">2022 – 2023</div>
+      <p>Strategic Projects Lead – Procurement optimisation and analytics across APAC & MEA.</p>
     </div>
 
   </div>
@@ -277,29 +245,29 @@
 </section>
 
 <!-- CERTIFICATIONS -->
-<section id="cert" class="reveal">
+<section id="cert">
 
   <h2>Certifications</h2>
 
   <div class="cert-grid">
 
     <div class="cert-card">
-      <img src="scm.jpg" onclick="openModal(this.src)">
+      <img src="scm.jpg">
       <p>Supply Chain Management</p>
     </div>
 
     <div class="cert-card">
-      <img src="scrum.jpg" onclick="openModal(this.src)">
+      <img src="scrum.jpg">
       <p>Scrum Master</p>
     </div>
 
     <div class="cert-card">
-      <img src="powerbi.jpg" onclick="openModal(this.src)">
+      <img src="powerbi.jpg">
       <p>Power BI</p>
     </div>
 
     <div class="cert-card">
-      <img src="lssgb.jpg" onclick="openModal(this.src)">
+      <img src="lssgb.jpg">
       <p>Lean Six Sigma</p>
     </div>
 
@@ -308,42 +276,25 @@
 </section>
 
 <!-- DASHBOARD -->
-<section id="dash" class="reveal">
+<section id="dash">
 
   <h2>Power BI Dashboard</h2>
 
-  <img src="powerbi_dashboard.jpg" class="dash" onclick="openModal(this.src)">
+  <p>
+    Supply chain analytics dashboard for lifecycle visibility and inventory optimisation.
+  </p>
+
+  <img src="powerbi_dashboard.jpg" class="dash">
+
+  <br><br>
+
+  <a class="btn"
+     target="_blank"
+     href="https://app.powerbi.com/groups/me/reports/cdd446c0-37de-4d6c-90c0-41f91f561b6a/9053f4539ee8c7009095?experience=power-bi">
+     Open Dashboard
+  </a>
 
 </section>
-
-<!-- MODAL -->
-<div id="modal" class="modal" onclick="closeModal()">
-  <span class="close">&times;</span>
-  <img id="modalImg">
-</div>
-
-<script>
-  function openModal(src) {
-    document.getElementById("modal").style.display = "block";
-    document.getElementById("modalImg").src = src;
-  }
-
-  function closeModal() {
-    document.getElementById("modal").style.display = "none";
-  }
-
-  function revealOnScroll() {
-    let elements = document.querySelectorAll(".reveal");
-    for (let el of elements) {
-      let top = el.getBoundingClientRect().top;
-      if (top < window.innerHeight - 100) {
-        el.classList.add("active");
-      }
-    }
-  }
-
-  window.addEventListener("scroll", revealOnScroll);
-</script>
 
 </body>
 </html>

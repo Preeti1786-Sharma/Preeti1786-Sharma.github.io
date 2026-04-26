@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resume | Preeti Sharma</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 950px;
+      margin: 70px auto;
+      color: #1f1f1f;
+      line-height: 1.7;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 5px;
+    }
+
+    .contact {
+      color: #555;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      border-bottom: 1px solid #e6e6e6;
+      padding-bottom: 6px;
+      margin-top: 40px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 14px;
+      margin: 10px 10px 20px 0;
+      background: #111;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    ul {
+      padding-left: 18px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #f4f4f4;
+      padding: 6px 10px;
+      margin: 5px;
+      border-radius: 6px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <h1>Preeti Sharma</h1>
+
+  <div class="contact">
+    Supply Chain & Lifecycle Manager | MedTech & High-Tech Industries <br>
+    Eindhoven, Netherlands · preeti.sharma1786@gmail.com · +31 6 35630826 <br>
+    linkedin.com/in/preeti-s-78b724152
+  </div>
+
+  <a class="btn" href="resume.pdf" target="_blank">Download PDF Resume</a>
+  <a class="btn" href="index.html">Back to Portfolio</a>
+
+  <!-- SUMMARY -->
+  <h2>Professional Summary</h2>
+  <p>
+    Supply Chain & Lifecycle Management professional with 6+ years of international experience across MedTech
+    and high-tech environments. Currently leading end-of-life (EOL) and obsolescence strategy at Philips,
+    focusing on working capital optimisation, forecasting accuracy, and regulatory compliance (GMP/GDP/QMS).
+  </p>
+
+  <!-- CORE SKILLS -->
+  <h2>Core Competencies</h2>
+  <span class="tag">EOL & Obsolescence Strategy</span>
+  <span class="tag">S&OP Planning</span>
+  <span class="tag">SAP MM/WM</span>
+  <span class="tag">Power BI</span>
+  <span class="tag">Inventory Optimisation</span>
+  <span class="tag">Working Capital</span>
+  <span class="tag">Lean Six Sigma</span>
+  <span class="tag">CAPA & QMS</span>
+
+  <!-- EXPERIENCE -->
+  <h2>Professional Experience</h2>
+
+  <h3>Lifecycle Manager | Philips Medical Systems Nederland B.V.</h3>
+  <p>Oct 2024 – Present | Best, Netherlands</p>
+  <ul>
+    <li>Own global EOL and obsolescence strategy for MedTech hardware portfolio ensuring supply continuity</li>
+    <li>Improved balance sheet accuracy through forecasting models integrating installed base & consumption data</li>
+    <li>Reduced excess & obsolete inventory by 20% through structured disposition planning</li>
+    <li>Improved forecast accuracy (MAPE: ~62% → ~78%) using data-driven models</li>
+    <li>Reduced decision cycle time from 2 months to 20 days via cross-functional governance</li>
+  </ul>
+
+  <h3>Supply Chain Intern | Philips</h3>
+  <p>Feb 2024 – Sep 2024</p>
+  <ul>
+    <li>Designed NOK handling process within QMS, reducing disruptions by 96%</li>
+    <li>Recognized for cross-functional process design and implementation success</li>
+  </ul>
+
+  <h3>Executive Associate | Corporate Gurukul</h3>
+  <p>Oct 2022 – Aug 2023</p>
+  <ul>
+    <li>Managed procurement across APAC & MEA regions</li>
+    <li>Delivered 10–15% cost savings on €2M spend</li>
+    <li>Reduced operational costs by 12% using Power BI dashboards</li>
+  </ul>
+
+  <h3>Deputy Manager | Navjyoti Foundation</h3>
+  <p>Feb 2019 – Sep 2021</p>
+  <ul>
+    <li>Led supply chain operations across multi-node logistics network</li>
+    <li>Improved on-time delivery and vendor performance metrics</li>
+    <li>Ensured zero non-conformances in GMP/GDP audits</li>
+  </ul>
+
+  <!-- EDUCATION -->
+  <h2>Education</h2>
+  <p>
+    MBA – Supply Chain Management | Maastricht University (2023–2024)
+  </p>
+
+  <p>
+    Thesis: NOK Handling Process Design for Regulatory & Operational Efficiency at Philips IGT
+  </p>
+
+  <!-- CERTIFICATIONS -->
+  <h2>Certifications</h2>
+  <ul>
+    <li>Certified ScrumMaster (CSM)</li>
+    <li>Lean Six Sigma Green Belt</li>
+  </ul>
+
+</body>
+</html>

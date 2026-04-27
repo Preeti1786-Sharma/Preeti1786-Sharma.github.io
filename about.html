@@ -11,8 +11,7 @@
       font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
       background: #0b0d10;
       color: #e6e6e6;
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
     }
 
     .nav {
@@ -33,23 +32,19 @@
       color: #9aa4b2;
       text-decoration: none;
       font-size: 13px;
-      font-weight: 500;
     }
 
-    .nav a:hover {
-      color: #ffffff;
-    }
+    .nav a:hover { color: #fff; }
 
     section {
       max-width: 980px;
       margin: auto;
-      padding: 110px 20px 70px;
+      padding: 110px 20px 60px;
     }
 
     h1 {
       text-align: center;
       font-size: 34px;
-      font-weight: 600;
       margin-bottom: 6px;
     }
 
@@ -57,94 +52,100 @@
       text-align: center;
       color: #8b949e;
       font-size: 14px;
-      margin-bottom: 22px;
+      margin-bottom: 25px;
     }
 
-    .profile-pic {
-      width: 135px;
-      height: 135px;
-      border-radius: 50%;
-      object-fit: cover;
-      display: block;
-      margin: 20px auto;
-      border: 1px solid #2a2f3a;
+    /* ===== HERO CARD ===== */
+    .hero-card {
+      background: #11151c;
+      border: 1px solid #1f2633;
+      border-radius: 14px;
+      padding: 18px;
+      text-align: center;
+      margin-bottom: 25px;
     }
 
-    .intro {
+    .hero-card p {
+      margin: 6px 0;
+      color: #cbd5e1;
+      font-size: 14px;
+    }
+
+    /* ===== IMPACT ===== */
+    .impact {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 25px 0;
+    }
+
+    .impact div {
       background: #11151c;
       border: 1px solid #1f2633;
       border-radius: 12px;
-      padding: 18px;
-      font-size: 14px;
-      color: #cbd5e1;
-      line-height: 1.75;
-      margin-bottom: 45px;
-      max-width: 860px;
-      margin-left: auto;
-      margin-right: auto;
+      padding: 14px;
+      text-align: center;
     }
 
-    .timeline {
-      position: relative;
-      margin-top: 20px;
+    .impact strong {
+      font-size: 18px;
+      display: block;
+      color: #fff;
     }
 
-    .timeline::before {
-      content: "";
-      position: absolute;
-      left: 18px;
-      top: 0;
-      bottom: 0;
-      width: 1px;
-      background: #232836;
-    }
-
-    .event {
-      position: relative;
-      padding-left: 55px;
-      margin-bottom: 34px;
-
-      opacity: 0;
-      transform: translateY(14px);
-      transition: all 0.6s ease;
-    }
-
-    .event.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .dot {
-      position: absolute;
-      left: 11px;
-      top: 6px;
-      width: 12px;
-      height: 12px;
-      background: #4f7cff;
-      border-radius: 50%;
-      box-shadow: 0 0 10px rgba(79,124,255,0.35);
-    }
-
-    .year {
+    .impact span {
       font-size: 12px;
-      color: #7d8590;
-      letter-spacing: 0.4px;
-      margin-bottom: 4px;
-    }
-
-    .title {
-      font-size: 15px;
-      font-weight: 600;
-      color: #e6e6e6;
-      margin-bottom: 6px;
-    }
-
-    .desc {
-      font-size: 13px;
       color: #aab4c0;
-      line-height: 1.65;
-      max-width: 720px;
     }
+
+    /* ===== CAREER SNAPSHOT ===== */
+    .section-title {
+      margin-top: 35px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .career {
+      margin-top: 12px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .role {
+      background: #11151c;
+      border: 1px solid #1f2633;
+      border-radius: 10px;
+      padding: 12px 14px;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 13px;
+      color: #cbd5e1;
+    }
+
+    .role strong {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    /* ===== SKILLS ===== */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .tag {
+      background: #11151c;
+      border: 1px solid #1f2633;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 12px;
+      color: #cbd5e1;
+    }
+
   </style>
 </head>
 
@@ -159,111 +160,83 @@
 
 <section>
 
-<h1>My Journey</h1>
-<div class="subtitle">Leadership • Supply Chain • Global Transformation</div>
+<h1>My Profile</h1>
+<div class="subtitle">Supply Chain • Lifecycle Management • EOL Strategy</div>
 
-<img src="pic.jpg" class="profile-pic" alt="Preeti Sharma">
-
-<div class="intro">
-A leadership-driven career evolving from sports discipline and customer operations in India to global MedTech lifecycle strategy in the Netherlands.
+<!-- HERO SUMMARY -->
+<div class="hero-card">
+  <p><strong>Supply Chain & Lifecycle Management professional</strong> at :contentReference[oaicite:0]{index=0}</p>
+  <p>Specialized in EOL strategy, inventory optimization, and global supply chain transformation</p>
+  <p>Focused on driving measurable operational efficiency and cross-functional impact</p>
 </div>
 
-<div class="timeline">
+<!-- IMPACT -->
+<div class="impact">
+  <div>
+    <strong>78%</strong>
+    <span>Forecast Accuracy Improvement</span>
+  </div>
+  <div>
+    <strong>20%</strong>
+    <span>Inventory Reduction</span>
+  </div>
+  <div>
+    <strong>20 Days</strong>
+    <span>Faster Decision Cycle</span>
+  </div>
+</div>
 
-  <div class="event">
-    <div class="dot"></div>
-    <div class="year">1986</div>
-    <div class="title">Early Foundation</div>
-    <div class="desc">Built discipline and structured thinking through early exposure to high-performance environments in Delhi, India.</div>
+<!-- CAREER SNAPSHOT -->
+<div class="section-title">Career Snapshot</div>
+
+<div class="career">
+
+  <div class="role">
+    <strong>Present</strong>
+    Lifecycle Manager – Philips (EOL Strategy & Governance)
   </div>
 
-  <div class="event">
-    <div class="dot"></div>
-    <div class="year">2005</div>
-    <div class="title">National-Level Basketball Athlete</div>
-    <div class="desc">Represented India at national championship level, developing leadership, discipline, and performance under pressure.</div>
+  <div class="role">
+    <strong>2024</strong>
+    Internship – Philips (Lifecycle transformation, NOK process)
   </div>
 
-  <div class="event">
-    <div class="dot"></div>
-    <div class="year">2008–2014</div>
-    <div class="title">Customer Relation Manager - Hyundai Motor India</div>
-    <div class="desc">Managed customer relations and service operations, strengthening expertise in lifecycle management and operational efficiency.</div>
+  <div class="role">
+    <strong>2023</strong>
+    MBA – Supply Chain Management (Netherlands)
   </div>
 
-  <div class="event">
-    <div class="dot"></div>
-    <div class="year">2014–2018</div>
-    <div class="title">Manager Admin - Angel Quality Solutions</div>
-    <div class="desc">Led administrative and operational workflows in an international business environment, building execution discipline.</div>
+  <div class="role">
+    <strong>2022–23</strong>
+    Corporate Gurukul – Procurement & analytics projects
   </div>
 
-  <div class="event">
-    <div class="dot"></div>
-    <div class="year">2018–2021</div>
-    <div class="title">Deputy Manager - Navjyoti India Foundation</div>
-    <div class="desc">Worked in structured governance programs under senior leadership, managing execution-heavy operational initiatives.</div>
+  <div class="role">
+    <strong>2018–21</strong>
+    Navjyoti Foundation – Operations & governance
   </div>
 
-  <div class="event">
-    <div class="dot"></div>
-    <div class="year">2022–2023</div>
-    <div class="title">Executive Assistant & Strategic Projects - Corporate Gurukul</div>
-    <div class="desc">Led procurement optimization and analytics-driven transformation projects.</div>
+  <div class="role">
+    <strong>2008–14</strong>
+    Hyundai Motor India – Customer operations
   </div>
 
-  <div class="event">
-    <div class="dot"></div>
-    <div class="year">2023</div>
-    <div class="title">MBA (Supply Chain Management) - Maastricht University</div>
-    <div class="desc">Relocated internationally to build global expertise in supply chain strategy and operations transformation.</div>
-  </div>
+</div>
 
-  <div class="event">
-    <div class="dot"></div>
-    <div class="year">Feb 2024</div>
-    <div class="title">Internship - Philips Medical Systems Nederland B.V.</div>
-    <div class="desc">Contributed to lifecycle transformation initiatives and end-of-life (EOL) process improvements.</div>
-  </div>
+<!-- SKILLS -->
+<div class="section-title">Core Expertise</div>
 
-  <div class="event">
-    <div class="dot"></div>
-    <div class="year">Sep 2024</div>
-    <div class="title">MBA Completion – Maastricht University</div>
-    <div class="desc">Completed MBA in Supply Chain Management with focus on global operations and strategic systems.</div>
-  </div>
-
-  <div class="event">
-    <div class="dot"></div>
-    <div class="year">Feb 2025</div>
-    <div class="title">NOK Process Implementation – Philips Medical Systems Nederland B.V.</div>
-    <div class="desc">Process designed during internship adopted into operational workflow for quality management.</div>
-  </div>
-
-  <div class="event">
-    <div class="dot"></div>
-    <div class="year">Present</div>
-    <div class="title">Lifecycle Manager – Philips Medical Systems Nederland B.V.</div>
-    <div class="desc">Leading global end-of-life (EOL) strategy and lifecycle governance for MedTech portfolio.</div>
-  </div>
-
+<div class="skills">
+  <div class="tag">EOL Strategy</div>
+  <div class="tag">S&OP Planning</div>
+  <div class="tag">Inventory Optimization</div>
+  <div class="tag">SAP MM/WM</div>
+  <div class="tag">Demand Forecasting</div>
+  <div class="tag">Regulatory Compliance</div>
+  <div class="tag">Cross-functional Governance</div>
 </div>
 
 </section>
-
-<script>
-const items = document.querySelectorAll('.event');
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('show');
-    }
-  });
-}, { threshold: 0.15 });
-
-items.forEach(item => observer.observe(item));
-</script>
 
 </body>
 </html>

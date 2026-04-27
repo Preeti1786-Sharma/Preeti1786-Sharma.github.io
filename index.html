@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Preeti Sharma | Lifecycle Manager</title>
+  <title>Preeti Sharma | Supply Chain & Lifecycle Management</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -14,7 +14,6 @@
       line-height: 1.65;
     }
 
-    /* NAV */
     .nav {
       position: fixed;
       top: 0;
@@ -65,7 +64,6 @@
       margin: auto;
     }
 
-    /* BUTTONS */
     .btns {
       text-align: center;
       margin-top: 18px;
@@ -83,7 +81,6 @@
       font-size: 13px;
     }
 
-    /* SECTIONS */
     .section-title {
       margin-top: 55px;
       font-size: 18px;
@@ -91,7 +88,6 @@
       color: #fff;
     }
 
-    /* GRID */
     .grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -114,7 +110,6 @@
       border-color: #2a3550;
     }
 
-    /* KPI */
     .kpi {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -137,7 +132,6 @@
       margin-bottom: 6px;
     }
 
-    /* CERTIFICATES */
     .cert {
       cursor: pointer;
     }
@@ -147,7 +141,6 @@
       transform: translateY(-3px) scale(1.01);
     }
 
-    /* SCROLL REVEAL */
     .reveal {
       opacity: 0;
       transform: translateY(18px);
@@ -159,7 +152,6 @@
       transform: translateY(0);
     }
 
-    /* MODAL */
     #certModal {
       display: none;
       position: fixed;
@@ -186,7 +178,6 @@
       cursor: pointer;
       color: #fff;
     }
-
   </style>
 </head>
 
@@ -202,41 +193,45 @@
 <section>
 
 <h1 class="reveal">Preeti Sharma</h1>
-<div class="subtitle reveal">Lifecycle Manager | Philips Medical Systems Nederland B.V.</div>
+
+<div class="subtitle reveal">
+Supply Chain & Lifecycle Management Professional | EOL Strategy • S&OP • Inventory Optimization
+</div>
 
 <p class="reveal">
-Supply Chain & Lifecycle Management professional with 6+ years of international experience across MedTech and high-tech environments, specializing in EOL strategy, inventory optimization, and global supply chain transformation.
+Supply Chain and Lifecycle Management professional with 6+ years of international experience at :contentReference[oaicite:1]{index=1} and across high-tech environments. I specialize in end-of-life (EOL) strategy, demand planning, and inventory optimization—driving measurable business impact through data-driven decision-making and cross-functional collaboration.
+</p>
+
+<p class="reveal" style="margin-top:10px;">
+Currently open to opportunities in Supply Chain Strategy, Lifecycle Management, and Operations Transformation.
 </p>
 
 <div class="btns reveal">
-  <a class="btn" href="resume.html">View Resume</a>
-  <a class="btn" href="projects.html">Case Studies</a>
+  <a class="btn" href="projects.html">View Case Studies</a>
+  <a class="btn" href="resume.html">Download Resume</a>
   <a class="btn" href="about.html">About Me</a>
 </div>
 
-<!-- WHAT I DRIVE -->
 <div class="section-title reveal">What I Drive</div>
 
 <div class="grid reveal">
-  <div class="card">EOL & Obsolescence Strategy</div>
-  <div class="card">S&OP & Demand Planning</div>
-  <div class="card">SAP (MM/WM) Execution</div>
-  <div class="card">Inventory Optimization</div>
-  <div class="card">Regulatory Compliance (GMP/GDP/QMS)</div>
-  <div class="card">Cross-functional Governance</div>
+  <div class="card">End-of-Life (EOL) & Obsolescence Strategy</div>
+  <div class="card">S&OP Planning & Demand Forecasting</div>
+  <div class="card">Inventory Optimization & Cost Reduction</div>
+  <div class="card">SAP (MM/WM) Execution & Process Efficiency</div>
+  <div class="card">Regulatory Compliance (GMP, GDP, QMS)</div>
+  <div class="card">Cross-functional Stakeholder Alignment</div>
 </div>
 
-<!-- KPI -->
 <div class="section-title reveal">Impact at a Glance</div>
 
 <div class="kpi reveal">
   <div><strong>78%</strong>Forecast Accuracy Improvement</div>
   <div><strong>20%</strong>Inventory Reduction</div>
-  <div><strong>20 Days</strong>Decision Cycle Time</div>
-  <div><strong>96%</strong>NOK Reduction</div>
+  <div><strong>20 Days</strong>Faster Decision-Making Cycle</div>
+  <div><strong>96%</strong>Reduction in Non-Quality Costs (NOK)</div>
 </div>
 
-<!-- CERTIFICATIONS -->
 <div class="section-title reveal">Certifications</div>
 
 <div class="grid reveal">
@@ -246,11 +241,11 @@ Supply Chain & Lifecycle Management professional with 6+ years of international 
   </div>
 
   <div class="card cert" onclick="openCert('scrum.jpg')">
-    Certified ScrumMaster
+    Certified ScrumMaster (CSM)
   </div>
 
   <div class="card cert" onclick="openCert('powerbi.jpg')">
-    Power BI Certification
+    Power BI for Data Analysis
   </div>
 
   <div class="card cert" onclick="openCert('scm.jpg')">
@@ -258,14 +253,13 @@ Supply Chain & Lifecycle Management professional with 6+ years of international 
   </div>
 
   <div class="card cert" onclick="openCert('msadvancedexcel.jpg')">
-    Advanced Excel Modeling
+    Advanced Excel & Data Modeling
   </div>
 
 </div>
 
 </section>
 
-<!-- MODAL -->
 <div id="certModal">
   <span class="close" onclick="closeCert()">×</span>
   <img id="certImg">
@@ -281,7 +275,6 @@ function closeCert() {
   document.getElementById("certModal").style.display = "none";
 }
 
-/* scroll reveal */
 const items = document.querySelectorAll('.reveal');
 
 const observer = new IntersectionObserver(entries => {

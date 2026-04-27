@@ -11,7 +11,7 @@
       font-family: "Inter", Arial, sans-serif;
       background: #0b0d10;
       color: #e6e6e6;
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
     .nav {
@@ -23,7 +23,7 @@
       display: flex;
       justify-content: center;
       gap: 22px;
-      padding: 12px;
+      padding: 14px;
       border-bottom: 1px solid #1c1f26;
       z-index: 1000;
     }
@@ -37,73 +37,66 @@
     .nav a:hover { color: #fff; }
 
     section {
-      max-width: 980px;
+      max-width: 900px;
       margin: auto;
-      padding: 110px 20px 60px;
+      padding: 120px 20px 60px;
     }
 
     h1 {
-      font-size: 36px;
-      font-weight: 600;
       text-align: center;
-      margin-bottom: 30px;
+      font-size: 40px;
+      margin-bottom: 10px;
     }
 
-    .card {
-      background: #11151c;
-      border: 1px solid #1f2633;
-      padding: 18px;
-      border-radius: 14px;
-      margin-top: 18px;
-      transition: 0.25s ease;
+    .subtitle {
+      text-align: center;
+      color: #8b949e;
+      margin-bottom: 40px;
+      font-size: 14px;
     }
 
-    .card:hover {
-      transform: translateY(-3px);
-      border-color: #2a3550;
+    .case {
+      margin-bottom: 60px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #1f2633;
     }
 
     h2 {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 12px;
+      font-size: 18px;
+      margin-bottom: 18px;
       color: #ffffff;
     }
 
-    .label {
+    .section-title {
       font-size: 12px;
       color: #7d8590;
-      margin-top: 14px;
-      letter-spacing: 0.3px;
+      margin-top: 18px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     p {
-      font-size: 13.5px;
+      font-size: 13.8px;
       color: #cbd5e1;
-      margin: 6px 0;
+      margin: 8px 0;
     }
 
     .kpi {
       display: inline-block;
-      background: linear-gradient(180deg, #11151c, #0f131b);
+      background: #11151c;
       border: 1px solid #1f2633;
-      padding: 8px 12px;
+      padding: 10px 12px;
       border-radius: 10px;
       font-size: 13px;
       margin-top: 10px;
-      color: #ffffff;
       margin-right: 8px;
+      color: #fff;
     }
 
     img {
       width: 100%;
       border-radius: 12px;
-      margin-top: 12px;
-      transition: 0.2s;
-    }
-
-    img:hover {
-      transform: scale(1.01);
+      margin-top: 14px;
     }
 
   </style>
@@ -121,87 +114,73 @@
 <section>
 
 <h1>Case Studies</h1>
+<div class="subtitle">Supply Chain · Operations · Analytics · MedTech</div>
 
-<!-- ================= CASE 1: NOK ================= -->
-<div class="card">
+<!-- ================= CASE 1 ================= -->
+<div class="case">
 
   <h2>NOK Check Process Design – Supply Chain Compliance (IGT-S)</h2>
 
-  <div class="label">CONTEXT</div>
+  <div class="section-title">Executive Summary</div>
   <p>
-    In global MedTech supply chain operations, late identification of regulatory or quality blocks was causing production stoppages and shipment delays.
-    Within the Image-Guided Therapy Systems (IGT-S) organization at Philips, NOK (Non-Quality) checks were historically performed only at order release and delivery stages, resulting in reactive issue handling.
+    Designed a structured NOK Check process during internship at Philips to improve early detection of regulatory and quality blocks in global supply chain operations.
+  </p>
+
+  <div class="section-title">Situation</div>
+  <p>
+    NOK checks were previously performed only at order release and delivery stages, leading to reactive issue handling and operational delays across global manufacturing sites.
+  </p>
+
+  <div class="section-title">Action</div>
+  <p>
+    Built a structured NOK Check framework by collaborating with Supply Chain, Quality, and Regulatory stakeholders across Best, Pune, and Suzhou to introduce early-stage validation.
   </p>
 
   <p>
-    During my internship, I identified this process gap and designed a structured NOK Check mechanism by collaborating with stakeholders across Supply Chain, Quality, and Regulatory teams across Best (Netherlands), Pune, and Suzhou sites.
+    Shifted checks to three stages: pre-release (3 weeks before), release, and delivery, enabling proactive identification of blocked materials.
   </p>
 
-  <div class="label">TRANSFORMATION</div>
+  <div class="section-title">Impact</div>
 
-  <p><strong>Previous State</strong><br>
-  • NOK checks performed only at order release and delivery stages<br>
-  • Late identification of regulatory/quality blocks causing disruptions<br>
-  • Limited harmonization across global manufacturing sites</p>
+  <div class="kpi">96% reduction in waiting time</div>
+  <div class="kpi">93% reduction in operational stops</div>
 
-  <p><strong>New Process Designed</strong><br>
-  • Introduced NOK checks 3 weeks prior to order release, at release, and at delivery<br>
-  • Enabled early identification of regulatory and quality blocks before production release<br>
-  • Created standardized workflow across Best, Pune, and Suzhou<br>
-  • Improved coordination between Supply Chain, Quality, and Regulatory functions</p>
-
-  <div class="label">ROLE</div>
   <p>
-    Identified process inefficiencies and designed the NOK Check framework, working closely with cross-functional teams to validate requirements and support implementation alignment.
-  </p>
-
-  <div class="label">RESULTS / IMPACT</div>
-
-  <div class="kpi">96% reduction in waiting time (13,100 → 563 hours)</div>
-  <div class="kpi">93% reduction in operational stops (418 → 27)</div>
-
-  <p><strong>Additional Outcomes:</strong><br>
-    • Improved on-time shipment performance to customers<br>
-    • Reduced supply chain disruptions through early issue detection<br>
-    • Strengthened compliance by preventing shipment of blocked materials<br>
-    • Improved cross-functional visibility across quality and regulatory workflows
-  </p>
-
-  <div class="label">BUSINESS VALUE</div>
-  <p>
-    Introduced a proactive control mechanism that improved early detection of regulatory and quality risks, enhancing execution reliability across the supply chain.
+    Improved shipment reliability, reduced supply chain disruptions, and strengthened compliance by preventing blocked material flow.
   </p>
 
   <img src="nok_process.png" alt="NOK Process">
 
 </div>
 
-<!-- ================= CASE 2: POWER BI ================= -->
-<div class="card">
+<!-- ================= CASE 2 ================= -->
+<div class="case">
 
   <h2>Supply Chain Analytics Dashboard – Power BI Decision Support System</h2>
 
-  <div class="label">PROBLEM</div>
+  <div class="section-title">Executive Summary</div>
   <p>
-    Lack of consolidated visibility into key performance indicators across business and supply chain functions led to fragmented reporting and delayed decision-making.
+    Developed a Power BI dashboard to improve visibility of supply chain and business KPIs for faster decision-making.
   </p>
 
-  <div class="label">SOLUTION</div>
+  <div class="section-title">Problem</div>
   <p>
-    Developed an interactive Power BI dashboard to consolidate business metrics and enable structured decision-making through visual analytics.
+    KPI data was fragmented across multiple sources, limiting real-time visibility and delaying decision-making.
   </p>
 
-  <div class="label">OUTCOME</div>
-
-  <div class="kpi">Improved KPI visibility & reporting efficiency</div>
-  <div class="kpi">Enabled data-driven decision-making insights</div>
-
+  <div class="section-title">Solution</div>
   <p>
-    Strengthened data-driven decision-making by enabling consolidated visibility of business performance metrics.
+    Designed an interactive Power BI dashboard consolidating revenue, profitability, and operational metrics into a single reporting layer.
   </p>
 
-  <div class="label">SKILLS USED</div>
-  <p>Power BI · Data Modeling · KPI Design · Business Intelligence · Supply Chain Analytics</p>
+  <div class="section-title">Impact</div>
+
+  <div class="kpi">Improved KPI visibility</div>
+  <div class="kpi">Faster decision-making cycles</div>
+
+  <p>
+    Enabled data-driven insights for business and supply chain performance tracking.
+  </p>
 
   <img src="powerbi_dashboard.jpg" alt="Power BI Dashboard">
 

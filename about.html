@@ -3,7 +3,6 @@
 <head>
   <title>About | Preeti Sharma</title>
 
-  <!-- TYPOGRAPHY (CONSISTENT SYSTEM) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -12,13 +11,10 @@
       font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
       background: #0b0d10;
       color: #e6e6e6;
+      line-height: 1.7;
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      letter-spacing: 0.2px;
-      line-height: 1.65;
     }
 
-    /* NAV (UNCHANGED STYLE, JUST POLISHED) */
     .nav {
       position: fixed;
       top: 0;
@@ -38,7 +34,6 @@
       text-decoration: none;
       font-size: 13px;
       font-weight: 500;
-      transition: 0.2s;
     }
 
     .nav a:hover {
@@ -48,22 +43,21 @@
     section {
       max-width: 980px;
       margin: auto;
-      padding: 110px 20px 60px;
+      padding: 110px 20px 70px;
     }
 
     h1 {
       text-align: center;
       font-size: 34px;
       font-weight: 600;
-      margin-bottom: 8px;
-      letter-spacing: -0.4px;
+      margin-bottom: 6px;
     }
 
     .subtitle {
       text-align: center;
       color: #8b949e;
       font-size: 14px;
-      margin-bottom: 25px;
+      margin-bottom: 22px;
     }
 
     .profile-pic {
@@ -74,24 +68,26 @@
       display: block;
       margin: 20px auto;
       border: 1px solid #2a2f3a;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     }
 
     .intro {
       background: #11151c;
       border: 1px solid #1f2633;
       border-radius: 12px;
-      padding: 16px;
+      padding: 18px;
       font-size: 14px;
       color: #cbd5e1;
-      line-height: 1.7;
-      margin-bottom: 40px;
+      line-height: 1.75;
+      margin-bottom: 45px;
+      max-width: 860px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    /* TIMELINE (PRESERVED LAYOUT) */
+    /* TIMELINE */
     .timeline {
       position: relative;
-      margin-top: 30px;
+      margin-top: 20px;
     }
 
     .timeline::before {
@@ -107,11 +103,11 @@
     .event {
       position: relative;
       padding-left: 55px;
-      margin-bottom: 28px;
+      margin-bottom: 34px;
 
       opacity: 0;
       transform: translateY(14px);
-      transition: all 0.5s ease;
+      transition: all 0.6s ease;
     }
 
     .event.show {
@@ -133,21 +129,28 @@
     .year {
       font-size: 12px;
       color: #7d8590;
-      margin-bottom: 3px;
-      letter-spacing: 0.3px;
+      letter-spacing: 0.4px;
+      margin-bottom: 4px;
     }
 
     .title {
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 600;
       color: #e6e6e6;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
 
     .desc {
       font-size: 13px;
       color: #aab4c0;
-      line-height: 1.6;
+      line-height: 1.65;
+      max-width: 720px;
+    }
+
+    /* subtle premium spacing feel */
+    .event:hover .title {
+      color: #ffffff;
+      transition: 0.2s;
     }
 
   </style>
@@ -155,7 +158,6 @@
 
 <body>
 
-<!-- NAV -->
 <div class="nav">
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
@@ -171,88 +173,86 @@
 <img src="pic.jpg" class="profile-pic" alt="Preeti Sharma">
 
 <div class="intro">
-A structured career evolving from sports leadership and customer operations in India to global MedTech lifecycle strategy at Philips Healthcare in the Netherlands.
+A leadership-driven career evolving from high-performance sports and customer operations in India to global MedTech lifecycle strategy at :contentReference[oaicite:0]{index=0} in the Netherlands.
 </div>
-
-<!-- TIMELINE -->
 
 <div class="timeline">
 
   <div class="event">
     <div class="dot"></div>
     <div class="year">1986</div>
-    <div class="title">Early Foundations</div>
-    <div class="desc">Born on 1st July 1986 in Delhi, India — with early exposure to structured, high-discipline environments.</div>
+    <div class="title">Early Foundation</div>
+    <div class="desc">Built discipline and structured thinking through early exposure to high-performance environments in Delhi, India.</div>
   </div>
 
   <div class="event">
     <div class="dot"></div>
     <div class="year">2005</div>
-    <div class="title">National Basketball Representation</div>
-    <div class="desc">Represented India in national championship, developing leadership and competitive mindset.</div>
+    <div class="title">National-Level Basketball Athlete</div>
+    <div class="desc">Represented India at national championship level, developing leadership under pressure, discipline, and competitive mindset.</div>
   </div>
 
   <div class="event">
     <div class="dot"></div>
     <div class="year">2008–2014</div>
-    <div class="title">Hyundai Motor India</div>
-    <div class="desc">Customer Relations Manager handling service operations and customer lifecycle experience.</div>
+    <div class="title">Hyundai Motor India – Customer Operations</div>
+    <div class="desc">Managed customer relations and service operations, strengthening expertise in lifecycle management and operational efficiency.</div>
   </div>
 
   <div class="event">
     <div class="dot"></div>
     <div class="year">2014–2018</div>
-    <div class="title">Angel Quality Solutions</div>
-    <div class="desc">Managed administration and operations in US-based organization.</div>
+    <div class="title">Angel Quality Solutions – Operations Management</div>
+    <div class="desc">Led administrative and operational workflows in a US-aligned organization, building execution discipline and process control capability.</div>
   </div>
 
   <div class="event">
     <div class="dot"></div>
     <div class="year">2018–2021</div>
-    <div class="title">Navjyoti India Foundation</div>
-    <div class="desc">Deputy Manager under Hon’ble Dr. Kiran Bedi leading governance and operations.</div>
+    <div class="title">Navjyoti India Foundation – Governance & Operations</div>
+    <div class="desc">Worked under senior leadership (Dr. Kiran Bedi) managing governance-driven operational programs with structured execution focus.</div>
   </div>
 
   <div class="event">
     <div class="dot"></div>
     <div class="year">2022–2023</div>
-    <div class="title">Corporate Gurukul</div>
-    <div class="desc">Strategic Projects Lead driving procurement optimization and analytics.</div>
+    <div class="title">Corporate Gurukul – Supply Chain Transformation</div>
+    <div class="desc">Led strategic projects in procurement optimization, analytics, and operational improvement initiatives.</div>
   </div>
 
   <div class="event">
     <div class="dot"></div>
     <div class="year">2023</div>
-    <div class="title">Netherlands – MBA</div>
-    <div class="desc">Moved for MBA in Supply Chain Management to gain global exposure.</div>
+    <div class="title">Netherlands – MBA (Supply Chain Management)</div>
+    <div class="desc">Relocated to the Netherlands to build global expertise in supply chain strategy and operations transformation.</div>
   </div>
 
   <div class="event">
     <div class="dot"></div>
     <div class="year">Feb 2024</div>
-    <div class="title">Philips Internship</div>
-    <div class="desc">Supply Chain Intern contributing to lifecycle transformation initiatives.</div>
+    <div class="title">:contentReference[oaicite:1]{index=1} – Internship</div>
+    <div class="desc">Contributed to lifecycle transformation initiatives and developed end-of-life (EOL) process improvements.</div>
   </div>
 
   <div class="event">
     <div class="dot"></div>
     <div class="year">Sep 2024</div>
-    <div class="title">MBA Completion</div>
-    <div class="desc">Completed MBA in Supply Chain Management at Maastricht University.</div>
+    <div class="title">MBA Completion – Maastricht University</div>
+    <div class="desc">Completed MBA in Supply Chain Management with focus on global operations and strategic supply chain systems.</div>
   </div>
 
   <div class="event">
     <div class="dot"></div>
     <div class="year">Feb 2025</div>
-    <div class="title">NOK Process Implementation</div>
-    <div class="desc">Philips adopted NOK handling process designed during internship.</div>
+    <div class="title">NOK Process Implementation – Philips Adoption</div>
+    <div class="desc">Process designed during internship was adopted within organizational workflow for quality and exception handling.</div>
   </div>
 
   <div class="event">
     <div class="dot"></div>
     <div class="year">Present</div>
-    <div class="title">Lifecycle Manager – Philips</div>
-    <div class="desc">Leading global EOL strategy and lifecycle governance for MedTech portfolio.</div>
+    <div class="title">Lifecycle Manager – :contentReference[oaicite:2]{index=2}</div>
+    <div class="desc">Leading global end-of-life (EOL) strategy and lifecycle governance for MedTech portfolio across international markets.</div>
   </div>
 
 </div>

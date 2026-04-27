@@ -14,27 +14,47 @@
       line-height: 1.7;
     }
 
-    .nav {
+    /* TOP BAR NAV */
+    .topbar {
       position: fixed;
       top: 0;
       width: 100%;
       background: rgba(11,13,16,0.85);
       backdrop-filter: blur(12px);
       display: flex;
-      justify-content: center;
-      gap: 22px;
-      padding: 14px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 24px;
       border-bottom: 1px solid #1c1f26;
       z-index: 1000;
     }
 
-    .nav a {
+    .nav-left a {
       color: #9aa4b2;
       text-decoration: none;
       font-size: 13px;
+      margin-right: 18px;
     }
 
-    .nav a:hover { color: #fff; }
+    .nav-left a:hover {
+      color: #fff;
+    }
+
+    .nav-right a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 13px;
+      margin-left: 12px;
+      padding: 8px 12px;
+      border: 1px solid #1f2633;
+      border-radius: 8px;
+      background: #11151c;
+      transition: 0.2s;
+    }
+
+    .nav-right a:hover {
+      border-color: #4f7cff;
+    }
 
     section {
       max-width: 980px;
@@ -65,8 +85,8 @@
 
     h2 {
       font-size: 16px;
-      margin-bottom: 8px;
       color: #fff;
+      margin-bottom: 8px;
     }
 
     h3 {
@@ -95,16 +115,16 @@
       font-size: 13.5px;
     }
 
-    .kpi {
-      display: inline-block;
-      background: #11151c;
-      border: 1px solid #1f2633;
-      padding: 10px 12px;
-      border-radius: 10px;
-      font-size: 13px;
-      margin-top: 10px;
-      margin-right: 8px;
-      color: #fff;
+    /* CLICKABLE COMPANY NAME */
+    .company-link {
+      color: #ffffff;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: 0.2s;
+    }
+
+    .company-link:hover {
+      border-bottom: 1px solid #4f7cff;
     }
 
   </style>
@@ -112,18 +132,27 @@
 
 <body>
 
-<div class="nav">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="projects.html">Case Studies</a>
-  <a href="resume.html">Resume</a>
+<!-- TOP BAR -->
+<div class="topbar">
+
+  <div class="nav-left">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Case Studies</a>
+    <a href="resume.html">Resume</a>
+  </div>
+
+  <div class="nav-right">
+    <a href="resume.pdf" target="_blank">Download Resume</a>
+  </div>
+
 </div>
 
 <section>
 
 <h1>Preeti Sharma</h1>
 <div class="subtitle">
-Supply Chain & Lifecycle Management | MedTech | EOL Strategy | S&OP | Inventory Optimization
+Supply Chain & Lifecycle Management | MedTech | EOL Strategy | S&OP | Analytics
 </div>
 
 <!-- ================= SUMMARY ================= -->
@@ -135,7 +164,7 @@ Supply Chain & Lifecycle Management | MedTech | EOL Strategy | S&OP | Inventory 
   </p>
 </div>
 
-<!-- ================= CORE COMPETENCIES ================= -->
+<!-- ================= CORE ================= -->
 <div class="card">
   <h2>Core Competencies</h2>
 
@@ -143,16 +172,15 @@ Supply Chain & Lifecycle Management | MedTech | EOL Strategy | S&OP | Inventory 
   <ul>
     <li>EOL & Obsolescence Strategy</li>
     <li>S&OP & Demand Planning</li>
-    <li>Inventory & Working Capital Optimization</li>
-    <li>Procurement & Vendor Coordination</li>
+    <li>Inventory Optimization</li>
+    <li>Procurement & Vendor Management</li>
   </ul>
 
   <div class="section-title">Analytics & Tools</div>
   <ul>
     <li>SAP (MM / WM)</li>
-    <li>Power BI Dashboards</li>
-    <li>Advanced Excel & Scenario Modelling</li>
-    <li>Data-driven Decision Support</li>
+    <li>Power BI</li>
+    <li>Advanced Excel & Modelling</li>
   </ul>
 
   <div class="section-title">Execution & Governance</div>
@@ -160,7 +188,6 @@ Supply Chain & Lifecycle Management | MedTech | EOL Strategy | S&OP | Inventory 
     <li>Cross-functional Stakeholder Management</li>
     <li>Process Standardization (Lean / CAPA)</li>
     <li>Regulatory Compliance (GMP / GDP / QMS)</li>
-    <li>Operational Risk Management</li>
   </ul>
 </div>
 
@@ -173,40 +200,35 @@ Supply Chain & Lifecycle Management | MedTech | EOL Strategy | S&OP | Inventory 
   <ul>
     <li>Own EOL and obsolescence strategy for global MedTech portfolio</li>
     <li>Improved forecast accuracy (MAPE 62% → 78%)</li>
-    <li>Reduced excess and obsolete inventory by 20%</li>
-    <li>Reduced decision cycle time from 2 months to 20 days</li>
+    <li>Reduced excess inventory by 20%</li>
   </ul>
 
   <h3>Supply Chain Intern | Philips Medical Systems Nederland B.V.</h3>
   <p>Feb 2024 – Sep 2024</p>
   <ul>
-    <li><b>Designed NOK Check process</b> for IGT-S supply chain across Best, Pune, and Suzhou</li>
-    <li>Enabled early detection of regulatory and quality blocks before order release</li>
-    <li>Achieved 96% reduction in waiting time and 93% reduction in operational stops</li>
+    <li><b>Designed NOK Check process</b> across Best, Pune, and Suzhou</li>
+    <li>Improved early detection of regulatory and quality blocks</li>
+    <li>96% reduction in waiting time and 93% reduction in operational stops</li>
   </ul>
 
-  <h3>Executive Associate & Strategic Projects Lead | Corporate Gurukul</h3>
-  <p>Oct 2022 – Aug 2023</p>
-  <ul>
-    <li>Managed procurement across APAC and MEA regions</li>
-    <li>Delivered 10–15% cost savings on €2M spend</li>
-    <li>Built Power BI dashboards for spend visibility</li>
-  </ul>
-
-  <h3>Executive Assistant | TechExpertz</h3>
+  <h3>
+    <a class="company-link" href="https://www.techexpertz.com/" target="_blank">
+      Executive Assistant | TechExpertz
+    </a>
+  </h3>
   <p>Sep 2021 – Oct 2022</p>
   <ul>
-    <li>Supported executive operations including scheduling, reporting, and coordination</li>
-    <li>Assisted procurement tracking and vendor communication workflows</li>
-    <li>Supported supply chain reporting and MIS data structuring</li>
+    <li>Managed calendar, travel, expense reports, and executive coordination in a technology environment</li>
+    <li>Supported procurement tracking, vendor communication, and operational reporting</li>
+    <li>Assisted in structured data and MIS support relevant to supply chain workflows</li>
   </ul>
 
   <h3>Deputy Manager | Navjyoti India Foundation</h3>
   <p>Feb 2019 – Sep 2021</p>
   <ul>
-    <li>Worked under guidance of Hon’ble Dr. Kiran Bedi (Former Lieutenant Governor of Puducherry & First Woman IPS Officer of India)</li>
-    <li>Reported directly to leadership office for program execution and governance coordination</li>
-    <li>Managed operational monitoring and field-level execution of social programs</li>
+    <li>Worked under Hon’ble Dr. Kiran Bedi (Former Lieutenant Governor of Puducherry & First Woman IPS Officer of India)</li>
+    <li>Reported directly to her office for governance and program execution coordination</li>
+    <li>Managed operational delivery of field programs and stakeholder alignment</li>
   </ul>
 </div>
 
@@ -214,13 +236,13 @@ Supply Chain & Lifecycle Management | MedTech | EOL Strategy | S&OP | Inventory 
 <div class="card">
   <h2>Education</h2>
   <p>MBA – Supply Chain Management | Maastricht University</p>
-  <p>Thesis: Design of NOK Handling Process at Philips IGT-S</p>
+  <p>Thesis: NOK Handling Process Design at Philips IGT-S</p>
 </div>
 
 <!-- ================= CERTIFICATIONS ================= -->
 <div class="card">
   <h2>Certifications</h2>
-  <p>Certified ScrumMaster | Lean Six Sigma Green Belt | SAP (MM, WM) | Power BI | Advanced Excel</p>
+  <p>Lean Six Sigma Green Belt | Certified ScrumMaster | SAP | Power BI | Advanced Excel</p>
 </div>
 
 <!-- ================= INTERESTS ================= -->
